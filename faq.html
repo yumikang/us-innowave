@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="유에스이노웨이브 자주 묻는 질문 - FAQ">
+    <title>자주 묻는 질문 | 유에스이노웨이브 - US INNOWAVE</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .faq-categories {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .faq-category-btn {
+            padding: 0.5rem 1.25rem;
+            border: 1px solid var(--border);
+            background: white;
+            color: var(--text-secondary);
+            border-radius: 0.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .faq-category-btn:hover {
+            background: var(--background-subtle);
+        }
+        
+        .faq-category-btn.active {
+            background: var(--brand-primary);
+            color: white;
+            border-color: var(--brand-primary);
+        }
+        
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-question {
+            padding: 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background: white;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .faq-question:hover {
+            background: var(--background-subtle);
+        }
+        
+        .faq-icon {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 1.25rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 1.25rem 1.25rem;
+            max-height: 500px;
+        }
+        
+        .faq-answer p {
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .faq-categories {
+                justify-content: center;
+            }
+            
+            .faq-category-btn {
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">US INNOWAVE</span>
+                    </a>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">
+                            회사소개
+                            <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">유에스이노웨이브</a></li>
+                            <li><a href="location.html">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="service-funding.html" class="nav-link">정책자금 컨설팅</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="service-export.html" class="nav-link">미국 수출 컨설팅</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="service-iso.html" class="nav-link">ISO 인증</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="portfolio.html" class="nav-link">성공사례</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a href="#" class="nav-link">
+                            고객지원
+                            <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="faq.html">자주 묻는 질문</a></li>
+                            <li><a href="notice.html">공지사항</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">자주 묻는 질문</h1>
+                <p class="page-subtitle">고객님들이 자주 문의하시는 내용을 정리했습니다</p>
+                <div class="breadcrumb">
+                    <a href="index.html">HOME</a>
+                    <span>/</span>
+                    <a href="#">고객지원</a>
+                    <span>/</span>
+                    <span>자주 묻는 질문</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="content-section">
+            <div class="container">
+                <!-- Category Buttons -->
+                <div class="faq-categories">
+                    <button class="faq-category-btn active" data-category="all">전체</button>
+                    <button class="faq-category-btn" data-category="funding">정책자금</button>
+                    <button class="faq-category-btn" data-category="export">미국 수출</button>
+                    <button class="faq-category-btn" data-category="iso">ISO 인증</button>
+                    <button class="faq-category-btn" data-category="general">일반문의</button>
+                </div>
+
+                <!-- FAQ Items -->
+                <div class="faq-list">
+                    <!-- 정책자금 FAQ -->
+                    <div class="faq-item" data-category="funding">
+                        <button class="faq-question">
+                            <span>정책자금 컨설팅은 어떤 기업이 받을 수 있나요?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                중소기업, 스타트업, 예비창업자 등 다양한 규모의 기업이 정책자금을 신청할 수 있습니다. 
+                                업종, 기업 규모, 사업 단계에 따라 신청 가능한 정책자금이 다르므로, 
+                                무료 상담을 통해 귀사에 적합한 정책자금을 안내해 드립니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="funding">
+                        <button class="faq-question">
+                            <span>정책자금 신청부터 승인까지 얼마나 걸리나요?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                정책자금 종류에 따라 다르지만, 일반적으로 신청 서류 준비 2-3주, 
+                                심사 및 평가 4-8주 정도 소요됩니다. 유에스이노웨이브는 
+                                체계적인 프로세스로 최단 기간 내 승인을 받을 수 있도록 지원합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="funding">
+                        <button class="faq-question">
+                            <span>컨설팅 비용은 어떻게 되나요?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                컨설팅 비용은 성공 보수 기반으로 운영됩니다. 정책자금 승인 후 
+                                일정 비율의 수수료를 받으며, 초기 상담 및 진단은 무료로 제공됩니다. 
+                                자세한 비용은 상담 시 안내해 드립니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 미국 수출 FAQ -->
+                    <div class="faq-item" data-category="export">
+                        <button class="faq-question">
+                            <span>FDA 인증이 필요한 제품은 어떤 것들이 있나요?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                의료기기, 의약품, 화장품, 식품, 건강기능식품 등이 FDA 규제 대상입니다. 
+                                제품 종류와 위험도에 따라 인증 절차가 다르며, 
+                                유에스이노웨이브는 제품별 맞춤 인증 전략을 제공합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="export">
+                        <button class="faq-question">
+                            <span>U.S. Agent는 왜 필요한가요?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                미국 FDA는 해외 제조업체에게 미국 내 대리인(U.S. Agent) 지정을 
+                                의무화하고 있습니다. U.S. Agent는 FDA와의 공식 연락 창구 역할을 하며, 
+                                긴급 상황 시 24시간 대응이 가능해야 합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="export">
+                        <button class="faq-question">
+                            <span>미국 시장 진출 전략 수립도 도와주시나요?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                네, FDA 인증뿐만 아니라 시장 조사, 유통 채널 개발, 
+                                현지 파트너 발굴, 마케팅 전략 수립 등 미국 시장 진출에 필요한 
+                                전반적인 컨설팅을 제공합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ISO 인증 FAQ -->
+                    <div class="faq-item" data-category="iso">
+                        <button class="faq-question">
+                            <span>ISO 인증 취득에 얼마나 걸리나요?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                기업 규모와 준비 상태에 따라 다르지만, 일반적으로 3-6개월 정도 소요됩니다. 
+                                유에스이노웨이브의 체계적인 컨설팅을 통해 평균 4개월 내 
+                                인증 취득이 가능합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="iso">
+                        <button class="faq-question">
+                            <span>ISO 인증 후 사후관리는 어떻게 되나요?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                ISO 인증은 3년 주기로 갱신하며, 매년 사후심사를 받아야 합니다. 
+                                유에스이노웨이브는 사후심사 준비, 내부심사 지원, 
+                                지속적 개선 활동 등을 통해 인증 유지를 지원합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="iso">
+                        <button class="faq-question">
+                            <span>여러 개의 ISO 인증을 동시에 받을 수 있나요?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                네, 가능합니다. ISO 9001, ISO 14001, ISO 45001 등을 
+                                통합경영시스템으로 구축하여 동시에 인증받을 수 있으며, 
+                                이를 통해 시간과 비용을 절감할 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 일반문의 FAQ -->
+                    <div class="faq-item" data-category="general">
+                        <button class="faq-question">
+                            <span>상담은 어떻게 신청하나요?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                홈페이지 상담 신청 폼을 작성하시거나, 전화(02-1234-5678) 또는 
+                                이메일(info@usinnowave.com)로 연락 주시면 됩니다. 
+                                영업일 기준 24시간 내 연락드립니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="general">
+                        <button class="faq-question">
+                            <span>컨설팅은 방문 상담만 가능한가요?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                아닙니다. 방문 상담 외에도 화상 회의, 전화 상담 등 
+                                다양한 방식으로 컨설팅이 가능합니다. 고객사의 상황에 맞춰 
+                                유연하게 대응하고 있습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="general">
+                        <button class="faq-question">
+                            <span>유에스이노웨이브의 강점은 무엇인가요?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                각 분야 최고의 전문가들이 One-Stop 서비스를 제공합니다. 
+                                500개 이상 기업의 성공 경험과 95% 이상의 높은 고객 만족도, 
+                                그리고 정부기관 출신 전문가들의 노하우가 강점입니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact CTA -->
+                <div class="card" style="margin-top: 3rem; background: var(--background-subtle);">
+                    <div style="text-align: center; padding: 2rem 0;">
+                        <h3 style="margin-bottom: 1rem;">찾으시는 답변이 없으신가요?</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                            전문 상담사가 친절하게 답변해 드립니다
+                        </p>
+                        <div class="hero-buttons" style="justify-content: center;">
+                            <a href="#" onclick="window.location.href='tel:02-1234-5678'; return false;" class="btn btn-primary">
+                                <span>📞 전화 문의</span>
+                            </a>
+                            <a href="#" onclick="window.location.href='mailto:info@usinnowave.com'; return false;" class="btn btn-secondary">
+                                <span>📧 이메일 문의</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">US INNOWAVE</h3>
+                    <p class="footer-description">
+                        기업의 글로벌 여정을 함께 설계하는<br>
+                        전략 파트너
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">회사소개</a></li>
+                        <li><a href="service-funding.html">정책자금 컨설팅</a></li>
+                        <li><a href="service-export.html">미국 수출 컨설팅</a></li>
+                        <li><a href="service-iso.html">ISO 인증</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">고객지원</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">자주 묻는 질문</a></li>
+                        <li><a href="notice.html">공지사항</a></li>
+                        <li><a href="portfolio.html">성공사례</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact</h4>
+                    <div class="footer-contact">
+                        <p>📞 02-1234-5678</p>
+                        <p>📧 info@usinnowave.com</p>
+                        <p>🏢 서울특별시 강남구</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#" onclick="openPrivacyPolicy(); return false;">개인정보처리방침</a>
+                    <span class="separator">|</span>
+                    <a href="#" onclick="openTerms(); return false;">이용약관</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 US INNOWAVE. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-question');
+            const categoryBtns = document.querySelectorAll('.faq-category-btn');
+            
+            // FAQ accordion
+            faqItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    const wasActive = faqItem.classList.contains('active');
+                    
+                    // Close all items
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    
+                    // Toggle current item
+                    if (!wasActive) {
+                        faqItem.classList.add('active');
+                    }
+                });
+            });
+            
+            // Category filter
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Update active button
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter FAQ items
+                    const category = this.dataset.category;
+                    const allFaqItems = document.querySelectorAll('.faq-item');
+                    
+                    allFaqItems.forEach(item => {
+                        if (category === 'all' || item.dataset.category === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                        // Close all items when filtering
+                        item.classList.remove('active');
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
