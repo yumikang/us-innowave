@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initDropdownMenus();
     initScrollEffects();
     initFooterLinks();
+    initParallaxHero(); // 패럴랙스 효과 추가
 });
 
 /**
@@ -477,5 +478,54 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth'
             });
         }
+    });
+}
+
+/**
+ * Smooth Parallax for .hero.full-bg
+ */
+function initParallaxHero() {
+    const hero = document.querySelector('.hero.full-bg');
+    if (!hero) return;
+
+    // 접근성: 모션 최소화 환경이면 비활성화
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) return;
+
+    // iOS Safari 등 고정배경/리페인트 이슈가 있는 환경 감지(대략적)
+    const ua = navigator.userAgent.toLowerCase();
+    const isIOS = /iphone|ipad|ipod/.test(ua);
+    const isOldAndroid = /android/.test(ua) && !/chrome|crios|fxios/.test(ua);
+
+    // 스크롤에 따라 배경 Y를 변경 (값은 취향에 따라 조절)
+    let ticking = false;
+    const intensity = 0.4; // 0.2~0.6 권장: 값이 클수록 패럴랙스 강함
+    const baseOffset = hero.getBoundingClientRect().top + window.pageYOffset;
+
+    const apply = () => {
+        const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        const rel = scrollY - baseOffset;         // 히어로 시작점 기준 상대 스크롤
+        const y = Math.round(rel * intensity);    // 이동량 계산
+        // iOS/구형 안드로이드에선 너무 큰 이동/리페인트 피하기
+        const safeY = (isIOS || isOldAndroid) ? Math.max(-200, Math.min(200, y)) : y;
+
+        hero.style.backgroundPosition = `center ${safeY}px`;
+        ticking = false;
+    };
+
+    const onScroll = () => {
+        if (!ticking) {
+            window.requestAnimationFrame(apply);
+            ticking = true;
+        }
+    };
+
+    // 초기 적용 + 이벤트 등록
+    apply();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', () => {
+        // 리사이즈 후 첫 프레임 재계산
+        hero.style.backgroundPosition = 'center 0px';
+        apply();
     });
 });
