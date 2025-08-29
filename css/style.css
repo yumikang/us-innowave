@@ -2,6 +2,19 @@
    US INNOWAVE - Main Stylesheet
    =================================== */
 
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 /* Root Variables - Design Tokens 3단계 구조 */
 :root {
     /* ===================================
@@ -353,6 +366,17 @@ body.homepage .main-content {
     margin-top: 0;
     padding-top: 0;
 }
+
+/* 서브 페이지들은 page-header가 패딩을 처리하므로 main-content 패딩 제거 */
+.main-content:has(.page-header) {
+    padding-top: 0;
+}
+
+/* has() 미지원을 위한 대안 - 서브페이지 클래스 */
+body:not(.homepage) .main-content {
+    padding-top: 0;
+}
+
 
 /* ===================================
    Footer
@@ -889,8 +913,9 @@ body.homepage .main-content {
 
 .page-header {
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-    padding: var(--section-y) 0;
+    padding: calc(var(--section-y) + 72px) 0 var(--section-y) 0;
     text-align: center;
+    margin-top: -72px;  /* 헤더 높이만큼 위로 이동 */
 }
 
 .page-title {
