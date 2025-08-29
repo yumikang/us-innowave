@@ -2,9 +2,101 @@
    US INNOWAVE - Main Stylesheet
    =================================== */
 
-/* Root Variables (shadcn/ui inspired) */
+/* Root Variables - Design Tokens 3단계 구조 */
 :root {
-    /* Colors */
+    /* ===================================
+       (A) PALETTE - 원시 색상층
+       =================================== */
+    
+    /* Brand Colors */
+    --brand-primary: #1e40af;
+    --brand-secondary: #3b82f6;
+    --brand-accent: #60a5fa;
+    
+    /* Gray Scale */
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    
+    /* State Colors */
+    --success: #16a34a;
+    --warning: #f59e0b;
+    --error: #dc2626;
+    --info: #0ea5e9;
+    
+    /* ===================================
+       (B) SEMANTIC - 의미론적 토큰층
+       =================================== */
+    
+    /* Text Colors */
+    --text-primary: var(--gray-900);
+    --text-secondary: var(--gray-600);
+    --text-muted: var(--gray-500);
+    --text-inverted: white;
+    
+    /* Background Colors */
+    --background-default: white;
+    --background-subtle: var(--gray-50);
+    --background-muted: var(--gray-100);
+    
+    /* Border Colors */
+    --border: var(--gray-200);
+    --border-subtle: var(--gray-100);
+    --border-strong: var(--gray-300);
+    
+    /* Component Colors */
+    --card-background: white;
+    --input-background: white;
+    --input-border: var(--gray-300);
+    --focus-ring: var(--brand-primary);
+    
+    /* ===================================
+       (C) SCALE - 스케일층
+       =================================== */
+    
+    /* Typography Scale */
+    --h1: clamp(2.4rem, 2.2rem + 1vw, 3rem);
+    --h2: clamp(1.8rem, 1.6rem + 0.6vw, 2.5rem);
+    --h3: clamp(1.5rem, 1.4rem + 0.4vw, 2rem);
+    --h4: clamp(1.25rem, 1.2rem + 0.2vw, 1.5rem);
+    --body: 1rem;
+    --body-sm: 0.875rem;
+    --body-lg: 1.125rem;
+    --leading: 1.6;
+    --leading-tight: 1.4;
+    --leading-loose: 1.8;
+    --tracking: 0;
+    
+    /* Spacing Scale */
+    --section-y: 80px;
+    --section-gap: 60px;
+    --content-gap: 32px;
+    --element-gap: 16px;
+    --element-gap-sm: 8px;
+    
+    /* Radius Scale */
+    --radius-sm: 0.375rem;
+    --radius: 0.5rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    
+    /* Shadow Scale */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    
+    /* ===================================
+       shadcn/ui 호환성 유지
+       =================================== */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
@@ -21,25 +113,19 @@
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
-    --radius: 0.5rem;
-    
-    /* Custom Brand Colors */
-    --brand-primary: #1e40af;
-    --brand-secondary: #3b82f6;
-    --brand-accent: #60a5fa;
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
-    --gray-300: #d1d5db;
-    --gray-400: #9ca3af;
-    --gray-500: #6b7280;
-    --gray-600: #4b5563;
-    --gray-700: #374151;
-    --gray-800: #1f2937;
-    --gray-900: #111827;
+}
+
+/* Mobile Scale Adjustments */
+@media (max-width: 768px) {
+    :root {
+        --section-y: 48px;
+        --section-gap: 32px;
+        --content-gap: 24px;
+        --h1: clamp(2rem, 1.6rem + 3vw, 2.4rem);
+        --h2: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+    }
 }
 
 /* Reset & Base */
@@ -55,10 +141,10 @@ html {
 
 body {
     font-family: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--gray-900);
-    background-color: white;
+    font-size: var(--body);
+    line-height: var(--leading);
+    color: var(--text-primary);
+    background-color: var(--background-default);
 }
 
 a {
@@ -452,7 +538,7 @@ img {
    =================================== */
 
 .hero {
-    padding: 80px 0;
+    padding: var(--section-y) 0;
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
 }
 
@@ -462,21 +548,21 @@ img {
     padding: 0 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: var(--section-gap);
     align-items: center;
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: var(--content-gap);
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: var(--h1);
     font-weight: 700;
-    line-height: 1.2;
-    color: var(--gray-900);
+    line-height: var(--leading-tight);
+    color: var(--text-primary);
 }
 
 .text-gradient {
@@ -527,15 +613,15 @@ img {
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: var(--h2);
     font-weight: 700;
-    color: var(--gray-900);
-    margin-bottom: 16px;
+    color: var(--text-primary);
+    margin-bottom: var(--element-gap);
 }
 
 .section-subtitle {
-    font-size: 1.125rem;
-    color: var(--gray-600);
+    font-size: var(--body-lg);
+    color: var(--text-secondary);
 }
 
 .services-grid {
@@ -758,11 +844,11 @@ img {
    =================================== */
 
 .content-section {
-    padding: 60px 0;
+    padding: var(--section-y) 0;
 }
 
 .content-section:nth-child(even) {
-    background-color: var(--gray-50);
+    background-color: var(--background-subtle);
 }
 
 .content-grid {
