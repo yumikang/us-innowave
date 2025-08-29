@@ -342,6 +342,18 @@ img {
     padding: var(--section-y) 0;
 }
 
+/* 홈페이지 풀스크린 히어로를 위한 특별 처리 */
+.main-content:has(.hero.full-bg) {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* has() 미지원 브라우저를 위한 대안 */
+body.homepage .main-content {
+    margin-top: 0;
+    padding-top: 0;
+}
+
 /* ===================================
    Footer
    =================================== */
@@ -551,9 +563,22 @@ img {
     justify-content: center;
     text-align: center;
     padding: 0;
+    --parallax-y: 0px;
+    overflow: hidden;
+    background: none !important; /* 기존 그라디언트 제거 */
+    z-index: 0;                  /* 스태킹 컨텍스트 생성 */
+    isolation: isolate;          /* 레이어 충돌 방지 */
+}
+
+.hero.full-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    height: 120%; /* 스크롤 여유 */
     background: url('../images/hero-business.jpg') center/cover no-repeat;
-    background-position: center 0; /* JS가 Y축만 다이내믹 변경 */
-    will-change: background-position; /* 스크롤 최적화 힌트 */
+    z-index: 0;   /* 배경 레이어 */
+    will-change: transform;
+    transform: translateY(var(--parallax-y));
 }
 
 /* Dark overlay for text readability */
@@ -562,12 +587,12 @@ img {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.4);
-    z-index: 0;
+    z-index: 1;   /* 오버레이 레이어 */
 }
 
 .hero.full-bg .hero-container {
     position: relative;
-    z-index: 1;
+    z-index: 2;   /* 콘텐츠 레이어 최상단 */
     max-width: 960px;
     padding: 0 20px;
     display: block;

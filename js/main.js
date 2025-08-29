@@ -479,7 +479,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
-}
+});
 
 /**
  * Smooth Parallax for .hero.full-bg
@@ -500,7 +500,7 @@ function initParallaxHero() {
     // 스크롤에 따라 배경 Y를 변경 (값은 취향에 따라 조절)
     let ticking = false;
     const intensity = 0.4; // 0.2~0.6 권장: 값이 클수록 패럴랙스 강함
-    const baseOffset = hero.getBoundingClientRect().top + window.pageYOffset;
+    let baseOffset = hero.getBoundingClientRect().top + window.pageYOffset;
 
     const apply = () => {
         const scrollY = window.pageYOffset || document.documentElement.scrollTop;
@@ -509,7 +509,7 @@ function initParallaxHero() {
         // iOS/구형 안드로이드에선 너무 큰 이동/리페인트 피하기
         const safeY = (isIOS || isOldAndroid) ? Math.max(-200, Math.min(200, y)) : y;
 
-        hero.style.backgroundPosition = `center ${safeY}px`;
+        hero.style.setProperty('--parallax-y', `${safeY}px`);
         ticking = false;
     };
 
@@ -524,8 +524,9 @@ function initParallaxHero() {
     apply();
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', () => {
-        // 리사이즈 후 첫 프레임 재계산
-        hero.style.backgroundPosition = 'center 0px';
+        // 리사이즈 후 기준점 재계산
+        baseOffset = hero.getBoundingClientRect().top + window.pageYOffset;
+        hero.style.setProperty('--parallax-y', '0px');
         apply();
     });
 });
