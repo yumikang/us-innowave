@@ -542,6 +542,67 @@ img {
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
 }
 
+/* Full Background Hero */
+.hero.full-bg {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    background: url('../images/hero-business.jpg') center/cover no-repeat;
+}
+
+/* Dark overlay for text readability */
+.hero.full-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.hero.full-bg .hero-container {
+    position: relative;
+    z-index: 1;
+    max-width: 960px;
+    padding: 0 20px;
+    display: block;
+    grid-template-columns: none;
+}
+
+.hero.full-bg .hero-title {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.hero.full-bg .hero-description {
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2.5rem;
+}
+
+.hero.full-bg .btn-primary {
+    background: white;
+    color: var(--brand-primary);
+}
+
+.hero.full-bg .btn-primary:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.hero.full-bg .btn-secondary {
+    border-color: white;
+    color: white;
+    background: transparent;
+}
+
+.hero.full-bg .btn-secondary:hover {
+    background: white;
+    color: var(--brand-primary);
+}
+
+/* Default Hero (for other pages) */
 .hero-container {
     max-width: 1280px;
     margin: 0 auto;
@@ -956,6 +1017,10 @@ img {
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+    
+    .hero.full-bg {
+        min-height: 80vh; /* 모바일에서는 약간 줄임 */
     }
     
     .hero-title {
