@@ -339,7 +339,7 @@ img {
 .main-content {
     margin-top: 72px;
     min-height: calc(100vh - 72px - 400px);
-    padding: 60px 0;
+    padding: var(--section-y) 0;
 }
 
 /* ===================================
@@ -349,7 +349,7 @@ img {
 .footer {
     background-color: var(--gray-900);
     color: white;
-    padding: 60px 0 20px;
+    padding: var(--section-y) 0 20px;
     margin-top: 80px;
 }
 
@@ -603,13 +603,13 @@ img {
    =================================== */
 
 .services {
-    padding: 80px 0;
+    padding: var(--section-y) 0;
     background-color: white;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: calc(var(--content-gap) * 1.5);
 }
 
 .section-title {
@@ -687,7 +687,7 @@ img {
    =================================== */
 
 .why-us {
-    padding: 80px 0;
+    padding: var(--section-y) 0;
     background-color: var(--gray-50);
 }
 
@@ -733,7 +733,7 @@ img {
    =================================== */
 
 .cta {
-    padding: 80px 0;
+    padding: var(--section-y) 0;
     background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
     color: white;
 }
@@ -801,20 +801,21 @@ img {
 
 .page-header {
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-    padding: 60px 0;
+    padding: var(--section-y) 0;
     text-align: center;
 }
 
 .page-title {
-    font-size: 2.5rem;
+    font-size: var(--h2);
     font-weight: 700;
-    color: var(--gray-900);
-    margin-bottom: 12px;
+    color: var(--text-primary);
+    margin-bottom: var(--element-gap-sm);
 }
 
 .page-subtitle {
-    font-size: 1.125rem;
-    color: var(--gray-600);
+    font-size: var(--body-lg);
+    color: var(--text-secondary);
+    margin-bottom: var(--content-gap);
 }
 
 .breadcrumb {
@@ -854,7 +855,7 @@ img {
 .content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: var(--section-gap);
     align-items: center;
 }
 
