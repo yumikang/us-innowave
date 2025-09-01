@@ -86,9 +86,9 @@ html, body {
        =================================== */
     
     /* Brand Colors */
-    --brand-primary: #1e40af;
-    --brand-secondary: #3b82f6;
-    --brand-accent: #60a5fa;
+    --brand-primary: #009DAE; /* 청록 + 약간 톤다운, 메인 */
+    --brand-secondary: #33B8B8; /* 보조, 밝지만 차분 */
+    --brand-accent: #66CCCC; /* 포인트, 산뜻하고 고급스러운 아쿠아 */
     
     /* Gray Scale */
     --gray-50: #f9fafb;
@@ -475,10 +475,7 @@ body:not(.homepage) .main-content {
 .footer-title {
     font-size: 1.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #60a5fa 0%, #93c5fd 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--brand-primary);
     margin-bottom: 8px;
 }
 
