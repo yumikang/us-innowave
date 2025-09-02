@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# 404 페이지는 크롤링 제외
+Disallow: /404.html
+
+# Sitemap 위치 명시
+Sitemap: https://usinnowave.com/sitemap.xml
+
+# 크롤링 속도 제한 (옵션)
+Crawl-delay: 1
