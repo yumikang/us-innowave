@@ -4,12 +4,46 @@
 
 // DOM Ready
 document.addEventListener('DOMContentLoaded', function() {
+    initGlobal();
+    initPage();
+});
+
+/**
+ * 페이지별 초기화 레지스트리
+ */
+const PageInits = {
+    'home': [initHeroSlider],
+    'policy-fund': [],
+    'company-intro': [],
+    'us-market': [],
+    'certification': [],
+    'services': [],
+    'contact': []
+};
+
+/**
+ * 전역 초기화
+ */
+function initGlobal() {
     initMobileMenu();
     initDropdownMenus();
     initScrollEffects();
     initFooterLinks();
-    initHeroSlider();
-});
+}
+
+/**
+ * 페이지별 초기화
+ */
+function initPage() {
+    const key = document.body.dataset.page;
+    (PageInits[key] || []).forEach(fn => {
+        try { 
+            fn(); 
+        } catch (e) { 
+            console.warn('Page init error:', e); 
+        }
+    });
+}
 
 /**
  * Mobile Menu Toggle

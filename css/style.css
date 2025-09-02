@@ -2,6 +2,9 @@
    US INNOWAVE - Main Stylesheet
    =================================== */
 
+/* CSS 레이어 시스템 선언 */
+@layer base, components, utilities, overrides;
+
 /* Presentation 한글 웹폰트 */
 @font-face {
     font-family: 'Presentation';
@@ -1493,3 +1496,55 @@ body:not(.homepage) .main-content {
 .mb-3 { margin-bottom: 24px; }
 .mb-4 { margin-bottom: 32px; }
 .mb-5 { margin-bottom: 40px; }
+
+/* ===================================
+   레이어 기반 유틸리티 & 오버라이드
+   =================================== */
+
+/* 공통 섹션 간격 유틸리티 */
+@layer utilities {
+  .pt-section { 
+    padding-top: var(--section-y, clamp(56px, 6vw, 112px)); 
+  }
+  .pb-section { 
+    padding-bottom: var(--section-y, clamp(56px, 6vw, 112px)); 
+  }
+  
+  /* 앵커 오프셋 */
+  [id] { 
+    scroll-margin-top: var(--header-h, 80px); 
+  }
+}
+
+/* 페이지 전용 오버라이드 */
+@layer overrides {
+  /* policy-fund.html 전용 */
+  .page-policy :where(.page-header) {
+    background: var(--section-bg, #f0f9ff);
+  }
+  
+  /* company-intro.html 전용 */
+  .page-company :where(.page-header) {
+    background: var(--section-bg, #fefefe);
+  }
+  
+  /* us-market.html 전용 */
+  .page-us :where(.page-header) {
+    background: var(--section-bg, #f0fdfa);
+  }
+  
+  /* services.html 전용 */
+  .page-services :where(.page-header) {
+    background: var(--section-bg, #f8fafc);
+  }
+  
+  /* certification.html 전용 */
+  .page-cert :where(.page-header) {
+    background: var(--section-bg, #fefbf3);
+  }
+  
+  /* contact.html 전용 */
+  .page-contact :where(.page-header) {
+    background: var(--section-bg, #f9fafb);
+  }
+}
