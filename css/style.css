@@ -1380,6 +1380,63 @@ body:not(.homepage) .main-content {
 }
 
 /* ===================================
+   Image Performance Optimization
+   =================================== */
+
+/* Use these classes when adding actual images */
+.img-lazy {
+    /* Apply with loading="lazy" attribute in HTML */
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Aspect Ratio Containers for consistent image dimensions */
+.aspect-16-9 {
+    aspect-ratio: 16/9;
+}
+
+.aspect-4-3 {
+    aspect-ratio: 4/3;
+}
+
+.aspect-1-1 {
+    aspect-ratio: 1/1;
+}
+
+.aspect-3-2 {
+    aspect-ratio: 3/2;
+}
+
+/* Image container with skeleton loading */
+.img-container {
+    position: relative;
+    overflow: hidden;
+    background: var(--background-subtle);
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===================================
    Utility Classes
    =================================== */
 

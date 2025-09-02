@@ -19,15 +19,30 @@ function initMobileMenu() {
     const navMenu = document.querySelector('.nav-menu');
     
     if (mobileMenuBtn && navMenu) {
+        // Set initial ARIA attributes for accessibility
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        mobileMenuBtn.setAttribute('aria-controls', 'nav-menu');
+        mobileMenuBtn.setAttribute('aria-label', '메뉴 열기');
+        navMenu.setAttribute('id', 'nav-menu');
+        navMenu.setAttribute('aria-hidden', 'true');
+        
         mobileMenuBtn.addEventListener('click', function() {
+            const isOpen = this.classList.contains('active');
+            
             this.classList.toggle('active');
             navMenu.classList.toggle('active');
             
-            // Body scroll lock when menu is open
-            if (navMenu.classList.contains('active')) {
+            // Update ARIA attributes
+            if (!isOpen) {
                 document.body.style.overflow = 'hidden';
+                this.setAttribute('aria-expanded', 'true');
+                this.setAttribute('aria-label', '메뉴 닫기');
+                navMenu.setAttribute('aria-hidden', 'false');
             } else {
                 document.body.style.overflow = '';
+                this.setAttribute('aria-expanded', 'false');
+                this.setAttribute('aria-label', '메뉴 열기');
+                navMenu.setAttribute('aria-hidden', 'true');
             }
         });
         
@@ -37,6 +52,9 @@ function initMobileMenu() {
                 mobileMenuBtn.classList.remove('active');
                 navMenu.classList.remove('active');
                 document.body.style.overflow = '';
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.setAttribute('aria-label', '메뉴 열기');
+                navMenu.setAttribute('aria-hidden', 'true');
             }
         });
     }
