@@ -540,6 +540,13 @@ function initHeroSlider() {
     const slides = document.querySelectorAll('.hero-slide');
     if (!slides || slides.length === 0) return;
     
+    // prefers-reduced-motion 가드
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (prefersReducedMotion.matches) {
+        // 사용자가 동작 감소를 선호하는 경우 슬라이드 기능 비활성화
+        return;
+    }
+    
     let currentSlide = 0;
     const slideInterval = 5000; // 5초마다 슬라이드 변경
     
@@ -555,6 +562,14 @@ function initHeroSlider() {
     }
     
     // 자동 슬라이드 시작
-    setInterval(nextSlide, slideInterval);
+    const sliderInterval = setInterval(nextSlide, slideInterval);
+    
+    // prefers-reduced-motion 설정 변경 감지
+    prefersReducedMotion.addEventListener('change', function() {
+        if (this.matches) {
+            // 동작 감소 모드로 변경되면 슬라이더 중지
+            clearInterval(sliderInterval);
+        }
+    });
 }
 

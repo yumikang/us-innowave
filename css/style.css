@@ -1514,6 +1514,40 @@ body:not(.homepage) .main-content {
   [id] { 
     scroll-margin-top: var(--header-h, 80px); 
   }
+  
+  /* 카드 컴포넌트 공통 클래스 */
+  .base-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .base-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+  
+  .card-content {
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  
+  .card-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1.5rem;
+    color: var(--brand-primary);
+  }
 }
 
 /* 페이지 전용 오버라이드 */
