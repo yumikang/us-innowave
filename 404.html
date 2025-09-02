@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="페이지를 찾을 수 없습니다 - US INNOWAVE">
+    <title>404 - 페이지를 찾을 수 없습니다 | US INNOWAVE</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #b1e7dc 0%, #215ac6 100%);
+            padding: 2rem;
+        }
+        
+        .error-container {
+            text-align: center;
+            max-width: 600px;
+            background: white;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+            line-height: 1;
+        }
+        
+        .error-title {
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin: 1.5rem 0;
+            font-weight: 600;
+        }
+        
+        .error-description {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+        
+        .error-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .error-buttons .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            min-width: 140px;
+        }
+        
+        .error-buttons .btn-primary {
+            background: linear-gradient(135deg, #009DAE 0%, #71C5CF 100%);
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 157, 174, 0.2);
+        }
+        
+        .error-buttons .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 157, 174, 0.3);
+        }
+        
+        .error-buttons .btn-secondary {
+            background: white;
+            color: #009DAE;
+            border: 2px solid #009DAE;
+        }
+        
+        .error-buttons .btn-secondary:hover {
+            background: #009DAE;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .error-icon {
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5rem;
+            }
+            
+            .error-title {
+                font-size: 1.5rem;
+            }
+            
+            .error-container {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <div class="error-container">
+            <div class="error-icon">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="url(#gradient)" stroke-width="2">
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#009DAE;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#71C5CF;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12" y2="16"/>
+                </svg>
+            </div>
+            
+            <h1 class="error-code">404</h1>
+            <h2 class="error-title">페이지를 찾을 수 없습니다</h2>
+            <p class="error-description">
+                요청하신 페이지가 존재하지 않거나 이동되었을 수 있습니다.<br>
+                URL을 다시 확인하시거나 아래 버튼을 통해 이동해 주세요.
+            </p>
+            
+            <div class="error-buttons">
+                <a href="/" class="btn btn-primary btn-lg">홈으로 이동</a>
+                <a href="/contact.html" class="btn btn-secondary btn-lg">문의하기</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Auto redirect to home after 10 seconds
+        setTimeout(function() {
+            // Uncomment if you want auto-redirect
+            // window.location.href = '/';
+        }, 10000);
+    </script>
+</body>
+</html>
