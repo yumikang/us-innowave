@@ -146,12 +146,33 @@
     --leading-loose: 1.8;
     --tracking: 0;
     
-    /* Spacing Scale */
-    --section-y: 80px;
-    --section-gap: 60px;
-    --content-gap: 32px;
-    --element-gap: 16px;
-    --element-gap-sm: 8px;
+    /* Spacing Scale - 체계적인 토큰 시스템 */
+    --spacing-0: 0;
+    --spacing-px: 1px;
+    --spacing-0-5: 0.125rem;  /* 2px */
+    --spacing-1: 0.25rem;     /* 4px */
+    --spacing-2: 0.5rem;      /* 8px */
+    --spacing-3: 0.75rem;     /* 12px */
+    --spacing-4: 1rem;        /* 16px */
+    --spacing-5: 1.25rem;     /* 20px */
+    --spacing-6: 1.5rem;      /* 24px */
+    --spacing-7: 1.75rem;     /* 28px */
+    --spacing-8: 2rem;        /* 32px */
+    --spacing-10: 2.5rem;     /* 40px */
+    --spacing-12: 3rem;       /* 48px */
+    --spacing-14: 3.5rem;     /* 56px */
+    --spacing-16: 4rem;       /* 64px */
+    --spacing-20: 5rem;       /* 80px */
+    --spacing-24: 6rem;       /* 96px */
+    --spacing-28: 7rem;       /* 112px */
+    --spacing-32: 8rem;       /* 128px */
+    
+    /* Semantic Spacing - 기존 변수 매핑 */
+    --section-y: clamp(var(--spacing-12), 8vw, var(--spacing-28));  /* 48px ~ 112px */
+    --section-gap: var(--spacing-16);  /* 60px → 64px */
+    --content-gap: var(--spacing-8);   /* 32px */
+    --element-gap: var(--spacing-4);   /* 16px */
+    --element-gap-sm: var(--spacing-2); /* 8px */
     
     /* Radius Scale */
     --radius-sm: 0.375rem;
@@ -278,8 +299,8 @@ img {
 .nav-link {
     display: flex;
     align-items: center;
-    gap: 4px;
-    padding: 8px 20px;
+    gap: var(--spacing-1);  /* 4px */
+    padding: var(--spacing-2) var(--spacing-5);  /* 8px 20px */
     font-size: 0.95rem;
     font-weight: 500;
     color: var(--gray-700);
@@ -393,8 +414,8 @@ img {
 .nav-trigger { 
     display: inline-flex; /* Mobile default: show hamburger */
     flex-direction: column;
-    gap: 4px;
-    padding: 8px;
+    gap: var(--spacing-1);  /* 4px */
+    padding: var(--spacing-2);
     background: none;
     border: none;
     cursor: pointer;
@@ -414,12 +435,12 @@ img {
     inset: 0 0 0 auto; /* right off-canvas */
     width: min(78vw, 360px);
     height: 100dvh;
-    background: #fff;
-    box-shadow: -24px 0 48px rgba(0,0,0,.12);
+    background: var(--background-default);
+    box-shadow: calc(var(--spacing-6) * -1) 0 var(--spacing-12) rgba(0,0,0,.12);
     transform: translateX(100%);
     transition: transform .28s ease;
     z-index: 60;
-    padding: 20px;
+    padding: var(--spacing-5);  /* 20px */
 }
 
 .mobile-menu.is-open { 
@@ -427,10 +448,10 @@ img {
 }
 
 .mobile-nav-list {
-    margin-top: 60px;
+    margin-top: var(--spacing-16);  /* ~60px */
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--spacing-4);  /* 16px */
     list-style: none;
 }
 
@@ -440,7 +461,7 @@ img {
 
 .mobile-nav-link {
     display: block;
-    padding: 16px 0;
+    padding: var(--spacing-4) 0;  /* 16px 0 */
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--gray-700);
@@ -454,14 +475,14 @@ img {
 
 .mobile-close-btn {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: var(--spacing-5);  /* 20px */
+    right: var(--spacing-5);
     background: none;
     border: none;
     font-size: 24px;
     color: var(--gray-600);
     cursor: pointer;
-    padding: 8px;
+    padding: var(--spacing-2);  /* 8px */
 }
 
 /* Drawer background dim */
@@ -535,8 +556,13 @@ body:not(.homepage) .main-content {
 .footer {
     background-color: var(--gray-900);
     color: white;
-    padding: var(--section-y) 0 20px;
-    margin-top: 80px;
+    padding: var(--section-y) 0 var(--spacing-5);
+    margin-top: var(--spacing-20);  /* 80px */
+}
+
+/* CTA와 Footer 사이의 간격 제거 */
+.cta + .footer {
+    margin-top: 0;
 }
 
 .footer-container {
@@ -841,6 +867,8 @@ body:not(.homepage) .main-content {
     display: flex;
     flex-direction: column;
     gap: var(--content-gap);
+    max-width: 800px;
+    margin-inline: auto;  /* 중앙 정렬 개선 */
 }
 
 .hero-title {
@@ -1046,32 +1074,32 @@ body:not(.homepage) .main-content {
 }
 
 .cta-title {
-    font-size: 2.5rem;
+    font-size: var(--h2);
     font-weight: 700;
-    margin-bottom: 16px;
+    margin-bottom: var(--spacing-4);  /* 16px */
 }
 
 .cta-description {
-    font-size: 1.125rem;
-    margin-bottom: 40px;
+    font-size: var(--body-lg);
+    margin-bottom: var(--spacing-10);  /* 40px */
     opacity: 0.95;
 }
 
 .cta-form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: var(--spacing-4);  /* 16px */
     max-width: 600px;
     margin: 0 auto;
 }
 
 .cta-input {
-    padding: 12px 16px;
-    border-radius: 8px;
+    padding: var(--spacing-3) var(--spacing-4);  /* 12px 16px */
+    border-radius: var(--radius);
     border: 1px solid rgba(255, 255, 255, 0.2);
     background: rgba(255, 255, 255, 0.1);
     color: white;
-    font-size: 1rem;
+    font-size: var(--body);
     backdrop-filter: blur(10px);
 }
 
@@ -1124,9 +1152,9 @@ body:not(.homepage) .main-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
-    margin-top: 20px;
-    font-size: 0.9rem;
+    gap: var(--spacing-2);  /* 8px */
+    margin-top: var(--spacing-5);  /* 20px */
+    font-size: var(--body-sm);
 }
 
 .breadcrumb a {
@@ -1863,12 +1891,12 @@ body:not(.homepage) .main-content {
 
   /* Text Shadow for Hero Readability */
   .text-shadow { 
-    text-shadow: 0 2px 8px rgba(0,0,0,0.3); 
+    text-shadow: 0 2px 10px rgba(0,0,0,0.45);  /* 가독성 향상 */
   }
   .text-shadow-light { 
-    text-shadow: 0 1px 4px rgba(0,0,0,0.2); 
+    text-shadow: 0 1px 5px rgba(0,0,0,0.3); 
   }
   .text-shadow-strong { 
-    text-shadow: 0 3px 12px rgba(0,0,0,0.4); 
+    text-shadow: 0 3px 15px rgba(0,0,0,0.6); 
   }
 }
