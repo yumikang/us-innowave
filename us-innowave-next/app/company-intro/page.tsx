@@ -1,0 +1,414 @@
+import { Metadata } from 'next';
+import Link from 'next/link';
+import styles from './company-intro.module.css';
+
+export const metadata: Metadata = {
+  title: '회사소개 | 유에스이노웨이브 - US INNOWAVE',
+  description: '유에스이노웨이브 회사소개 - 2020년 설립 이후 500여 기업의 성공적인 성장을 지원해온 전문 컨설팅 기업. 정책자금, 미국 수출, ISO 인증 전문가 그룹이 함께합니다.',
+  keywords: '유에스이노웨이브, US INNOWAVE, 회사소개, 정책자금 컨설팅, FDA 인증, ISO 인증, 미국 수출, 기업 컨설팅',
+  openGraph: {
+    title: '회사소개 | 유에스이노웨이브 - US INNOWAVE',
+    description: '유에스이노웨이브 회사소개 - 2020년 설립 이후 500여 기업의 성공적인 성장을 지원해온 전문 컨설팅 기업. 정책자금, 미국 수출, ISO 인증 전문가 그룹이 함께합니다.',
+    type: 'website',
+  },
+};
+
+export default function CompanyIntroPage() {
+  return (
+    <>
+      {/* Page Header */}
+      <section className="page-header">
+        <div className="container">
+          <h1 className="page-title">유에스이노웨이브</h1>
+          <p className="page-subtitle">기업의 글로벌 여정을 함께 설계하는 전략 파트너</p>
+          <div className="breadcrumb">
+            <Link href="/">HOME</Link>
+            <span>/</span>
+            <Link href="#">회사소개</Link>
+            <span>/</span>
+            <span>유에스이노웨이브</span>
+          </div>
+        </div>
+      </section>
+
+      {/* CEO Message Section */}
+      <section className="content-section">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">CEO 인사말</h2>
+            <p className="section-subtitle">유에스이노웨이브와 함께 성장하는 미래</p>
+          </div>
+          <div className="grid-stretch">
+            <div className="content-image">
+              <div className="content-image-placeholder" style={{ borderRadius: '12px', overflow: 'hidden' }}>
+                <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="400" height="500" fill="#f3f4f6"/>
+                  <circle cx="200" cy="180" r="60" fill="#e5e7eb"/>
+                  <rect x="140" y="260" width="120" height="180" fill="#e5e7eb" rx="10"/>
+                  <text x="50%" y="50%" textAnchor="middle" fill="#9ca3af" fontSize="18">CEO Photo</text>
+                </svg>
+              </div>
+            </div>
+            <div className="content-text">
+              <div className={styles.ceoMessage}>
+                <p className={styles.ceoGreeting}>
+                  안녕하십니까,<br/>
+                  유에스이노웨이브 대표이사 김영철입니다.
+                </p>
+                <p className={styles.ceoText}>
+                  우리나라 중소기업의 우수한 기술력과 제품이 세계 시장에서 
+                  정당한 평가를 받을 수 있도록 돕는 것이 저희의 사명입니다.
+                </p>
+                <p className={styles.ceoText}>
+                  특히 <strong>정부 정책자금 활용</strong>부터 <strong>미국 시장 진출</strong>까지, 
+                  기업 성장의 모든 단계에서 최적의 솔루션을 제공하여 
+                  여러분의 성공적인 글로벌 비즈니스를 실현하겠습니다.
+                </p>
+                <p className={styles.ceoText}>
+                  20년간 축적된 정책자금 컨설팅 노하우와 미국 현지 네트워크를 바탕으로,
+                  고객사와 함께 성장하는 파트너가 되겠습니다.
+                </p>
+                <p className={styles.ceoSignature}>
+                  유에스이노웨이브 대표이사 <span>김영철</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Company Overview Section */}
+      <section className="content-section">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">회사개요</h2>
+            <p className="section-subtitle">정책자금부터 미국 진출까지, 원스톱 비즈니스 솔루션</p>
+          </div>
+          <div className={styles.overviewGrid}>
+            <div className={styles.overviewCard}>
+              <div className={styles.overviewNumber}>2020</div>
+              <h4>설립년도</h4>
+              <p>글로벌 팬데믹 속에서도 중소기업의 성장을 지원</p>
+            </div>
+            <div className={styles.overviewCard}>
+              <div className={styles.overviewNumber}>500+</div>
+              <h4>누적 컨설팅</h4>
+              <p>정책자금, FDA 인증, ISO 인증 등 다양한 분야</p>
+            </div>
+            <div className={styles.overviewCard}>
+              <div className={styles.overviewNumber}>95%</div>
+              <h4>고객 만족도</h4>
+              <p>전문성과 신뢰를 바탕으로 한 높은 재계약률</p>
+            </div>
+            <div className={styles.overviewCard}>
+              <div className={styles.overviewNumber}>50+</div>
+              <h4>파트너 기관</h4>
+              <p>국내외 정부기관 및 전문기관과의 협력 네트워크</p>
+            </div>
+          </div>
+          
+          <div className="grid-stretch" style={{ marginTop: '48px' }}>
+            <div className="card">
+              <h3 className="card-title">주요 사업분야</h3>
+              <ul className="content-list">
+                <li><strong>정책자금 컨설팅</strong> - 창업, R&D, 수출 등 정부지원사업</li>
+                <li><strong>미국 시장 진출</strong> - FDA 인증, U.S. Agent, 조달시장 진입</li>
+                <li><strong>기업 인증</strong> - ISO, 벤처기업, 이노비즈, 기업부설연구소</li>
+                <li><strong>경영 컨설팅</strong> - 사업계획서, IR, 기술사업화</li>
+              </ul>
+            </div>
+            <div className="card">
+              <h3 className="card-title">차별화 포인트</h3>
+              <ul className="content-list">
+                <li><strong>이중 전문성</strong> - 국내 정책자금 + 미국 시장 동시 지원</li>
+                <li><strong>원스톱 서비스</strong> - 자금 조달부터 해외 진출까지 통합 지원</li>
+                <li><strong>성공 보수제</strong> - 성과 기반 수수료로 부담 최소화</li>
+                <li><strong>현지 네트워크</strong> - 미국 현지 파트너사 및 전문가 그룹 보유</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision & Mission Section */}
+      <section className="content-section">
+        <div className="container">
+          <div className="grid-stretch">
+            <div className="content-text">
+              <h2 className="content-title">비전과 미션</h2>
+              <p className="content-description">
+                유에스이노웨이브는 국내 중소기업의 글로벌 진출을 돕는 
+                종합 비즈니스 컨설팅 기업입니다.
+              </p>
+              <div className="card">
+                <h3 className="card-title">VISION</h3>
+                <p className="card-content">
+                  "모든 기업이 글로벌 시장에서 성공할 수 있는 세상"<br/>
+                  우리는 기업 규모에 상관없이 모든 기업이 세계 시장에서 
+                  경쟁력을 갖출 수 있도록 지원합니다.
+                </p>
+              </div>
+              <div className="card">
+                <h3 className="card-title">MISSION</h3>
+                <p className="card-content">
+                  "기업 성장의 모든 단계에서 최적의 솔루션 제공"<br/>
+                  설립부터 해외 진출까지, 기업이 필요로 하는 모든 순간에 
+                  전문성과 경험을 바탕으로 함께합니다.
+                </p>
+              </div>
+            </div>
+            <div className="content-image">
+              <div className="content-image-placeholder">
+                <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="500" height="400" fill="#f3f4f6"/>
+                  <text x="50%" y="50%" textAnchor="middle" fill="#9ca3af" fontSize="18">Vision & Mission Image</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values Section */}
+      <section className="content-section">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">핵심 가치</h2>
+            <p className="section-subtitle">유에스이노웨이브가 추구하는 4가지 핵심 가치</p>
+          </div>
+          <div className="card-flow">
+            <div className="service-card">
+              <div className="service-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <h3 className="service-title">전문성</h3>
+              <p className="service-description">
+                각 분야 최고의 전문가들이 깊이 있는 지식과 
+                풍부한 경험을 바탕으로 컨설팅을 제공합니다
+              </p>
+            </div>
+            <div className="service-card">
+              <div className="service-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <h3 className="service-title">신뢰</h3>
+              <p className="service-description">
+                투명한 프로세스와 정직한 소통으로 
+                고객과의 신뢰 관계를 구축합니다
+              </p>
+            </div>
+            <div className="service-card">
+              <div className="service-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+              </div>
+              <h3 className="service-title">혁신</h3>
+              <p className="service-description">
+                변화하는 시장 환경에 맞춰 끊임없이 
+                새로운 솔루션을 개발하고 제공합니다
+              </p>
+            </div>
+            <div className="service-card">
+              <div className="service-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <h3 className="service-title">성과</h3>
+              <p className="service-description">
+                측정 가능한 결과와 실질적인 성과를 통해 
+                고객의 성공을 증명합니다
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* History Section */}
+      <section className="content-section">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">회사 연혁</h2>
+            <p className="section-subtitle">유에스이노웨이브의 성장 여정</p>
+          </div>
+          <div className="grid-stretch">
+            <div className="content-text">
+              <ul className="content-list">
+                <li><strong>2024년</strong> - ISO 인증 컨설팅 서비스 런칭</li>
+                <li><strong>2023년</strong> - 미국 현지 파트너십 체결</li>
+                <li><strong>2022년</strong> - FDA 인증 전문팀 구성</li>
+                <li><strong>2021년</strong> - 정책자금 컨설팅 100건 달성</li>
+                <li><strong>2020년</strong> - 유에스이노웨이브 설립</li>
+              </ul>
+            </div>
+            <div className="content-text">
+              <div className="card">
+                <h3 className="card-title">주요 성과</h3>
+                <div className={styles.achievementGrid}>
+                  <div className={styles.achievementItem}>
+                    <div className={styles.achievementNumber}>500+</div>
+                    <div>
+                      <h4>누적 컨설팅 건수</h4>
+                      <p>다양한 산업 분야의 기업들과 함께했습니다</p>
+                    </div>
+                  </div>
+                  <div className={styles.achievementItem}>
+                    <div className={styles.achievementNumber}>95%</div>
+                    <div>
+                      <h4>고객 만족도</h4>
+                      <p>높은 만족도와 재계약률을 유지하고 있습니다</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Legal Advisory Section */}
+      <section className="content-section">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">법률자문</h2>
+            <p className="section-subtitle">국내외 법률 전문가와 함께하는 안전한 비즈니스</p>
+          </div>
+          <div className="card-flow">
+            <div className={styles.legalCard} style={{ background: 'linear-gradient(135deg, #fef3c7 0%, #fef9e7 100%)', border: '1px solid #fde68a' }}>
+              <div className="service-icon" style={{ background: '#fbbf24', color: 'white' }}>
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                  <path d="M12 8v4l3 3"/>
+                </svg>
+              </div>
+              <h3 className="card-title">법무법인 하늘</h3>
+              <p className="card-content">
+                <strong>전문분야:</strong> 기업법무, 정부계약<br/>
+                <strong>주요경력:</strong><br/>
+                • 정부조달계약 자문 500+ 건<br/>
+                • 중소기업 법률지원 10년<br/>
+                • 미국 수출계약 검토 전문
+              </p>
+            </div>
+            <div className={styles.legalCard} style={{ background: 'linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%)', border: '1px solid #bfdbfe' }}>
+              <div className="service-icon" style={{ background: '#3b82f6', color: 'white' }}>
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M2 12h20"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </div>
+              <h3 className="card-title">Smith & Associates (미국)</h3>
+              <p className="card-content">
+                <strong>전문분야:</strong> FDA 규제, 국제무역법<br/>
+                <strong>주요경력:</strong><br/>
+                • FDA 법률 자문 15년<br/>
+                • 한미 FTA 전문<br/>
+                • 미국 연방조달 계약 전문
+              </p>
+            </div>
+            <div className={styles.legalCard} style={{ background: 'linear-gradient(135deg, #e0e7ff 0%, #f5f3ff 100%)', border: '1px solid #c7d2fe' }}>
+              <div className="service-icon" style={{ background: '#6366f1', color: 'white' }}>
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                  <polyline points="10 9 9 9 8 9"/>
+                </svg>
+              </div>
+              <h3 className="card-title">회계법인 성우</h3>
+              <p className="card-content">
+                <strong>전문분야:</strong> 세무, 회계감사<br/>
+                <strong>주요경력:</strong><br/>
+                • 정부지원금 정산 전문<br/>
+                • 국제조세 자문<br/>
+                • 기업가치평가 500+ 건
+              </p>
+            </div>
+          </div>
+          
+          <div className={styles.legalServices}>
+            <h3>자문 서비스 범위</h3>
+            <div className="grid-stretch">
+              <ul className="content-list">
+                <li><strong>계약 검토</strong> - 정부계약, 수출계약, 파트너십 계약</li>
+                <li><strong>규제 대응</strong> - FDA, EPA, FTC 등 미국 규제 대응</li>
+                <li><strong>분쟁 해결</strong> - 무역 분쟁, 계약 분쟁 중재 및 소송</li>
+              </ul>
+              <ul className="content-list">
+                <li><strong>지적재산권</strong> - 특허, 상표, 영업비밀 보호</li>
+                <li><strong>컴플라이언스</strong> - 수출입 규제, 반덤핑, 관세</li>
+                <li><strong>M&A 자문</strong> - 기업 인수합병, 투자유치 법률 지원</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="content-section">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">전문가 그룹</h2>
+            <p className="section-subtitle">각 분야 최고의 전문가들이 함께합니다</p>
+          </div>
+          <div className="card-flow">
+            <div className="card">
+              <h3 className="card-title">정책자금 전문가</h3>
+              <p className="card-content">
+                • 전현직 정책금융기관 심사역<br/>
+                • 사업계획서 작성 전문가<br/>
+                • 정부지원사업 평가위원 경력
+              </p>
+            </div>
+            <div className="card">
+              <h3 className="card-title">U.S. Agent</h3>
+              <p className="card-content">
+                • 미국 현지 법인 운영 경험<br/>
+                • FDA 등록 대행 10년 경력<br/>
+                • 현지 유통망 네트워크 보유
+              </p>
+            </div>
+            <div className="card">
+              <h3 className="card-title">ISO 선임심사원</h3>
+              <p className="card-content">
+                • ISO 9001/14001/45001 인증심사원<br/>
+                • 500개 이상 기업 심사 경험<br/>
+                • 산업별 맞춤 컨설팅 제공
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="cta">
+        <div className="container">
+          <div className="cta-content">
+            <h2 className="cta-title">함께 성장하는 파트너</h2>
+            <p className="cta-description">
+              유에스이노웨이브와 함께 글로벌 시장에서의 성공을 만들어가세요
+            </p>
+            <div className="btn-row" style={{ justifyContent: 'center' }}>
+              <Link href="/policy-fund" className="btn btn-primary btn-lg" style={{ background: 'white', color: 'var(--brand-primary)' }}>
+                서비스 알아보기
+              </Link>
+              <Link href="/contact" className="btn btn-secondary btn-lg">
+                문의하기
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
