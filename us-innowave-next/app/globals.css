@@ -99,6 +99,10 @@
     --error: #dc2626;
     --info: #0ea5e9;
     
+    /* Container Variables */
+    --container-max: 1200px;
+    --container-pad: clamp(16px, 3vw, 24px);
+    
     /* ===================================
        (B) SEMANTIC - 의미론적 토큰층
        =================================== */
@@ -214,10 +218,9 @@ img {
 
 /* Container */
 .container {
-    width: 100%;
-    max-width: 1280px;
+    width: min(var(--container-max), 92vw);
     margin: 0 auto;
-    padding: 0 20px;
+    padding-inline: var(--container-pad);
 }
 
 /* ===================================
@@ -1573,6 +1576,56 @@ body:not(.homepage) .main-content {
     position: relative; 
     z-index: 1; 
   }
+
+  /* ===== 전역 미세 튜닝 유틸리티 ===== */
+  
+  /* 1) 카드/그리드: 높이 균일 & 내부 정렬 */
+  .grid-stretch { 
+    display: grid; 
+    align-items: stretch; 
+  }
+  
+  .card-flow { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+  }
+
+  /* 2) 카드 타이포 간격(타이틀-본문 간격 표준) */
+  .card-title { 
+    margin-block: 0.25rem 0.5rem; 
+    line-height: 1.25; 
+  }
+  
+  .card-text { 
+    opacity: 0.9; 
+  }
+
+  /* 3) 아이콘 규격(일관 크기) */
+  .icon-12 { 
+    width: 3rem; 
+    height: 3rem; 
+    flex: 0 0 auto; 
+  }
+
+  /* 4) 버튼 묶음 간격/정렬(CTA, Hero 등 어디서나) */
+  .btn-row { 
+    display: flex; 
+    gap: 1rem; 
+    flex-wrap: wrap; 
+    align-items: center; 
+  }
+  
+  .btn-row.center { 
+    justify-content: center; 
+  }
+
+  /* 5) 이미지/아이콘 인라인 간극 제거(전역) */
+  img, svg { 
+    display: block; 
+    max-width: 100%; 
+    height: auto; 
+  }
 }
 
 /* 페이지 전용 오버라이드 */
@@ -1634,4 +1687,55 @@ body:not(.homepage) .main-content {
 
 .skip-link:focus {
   top: 0;
+}
+
+/* ===================================
+   GLOBAL FINE-TUNING UTILITIES
+   Layer: utilities
+   =================================== */
+@layer utilities {
+  /* Grid & Layout */
+  .grid-stretch { 
+    display: grid; 
+    align-items: stretch; 
+  }
+
+  /* Card Components */
+  .card-flow { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+  }
+  .card-title { 
+    margin-block: 0.25rem 0.5rem; 
+    line-height: 1.25; 
+  }
+  .card-text { 
+    opacity: 0.9; 
+  }
+
+  /* Icon Sizing */
+  .icon-12 { 
+    width: 3rem; 
+    height: 3rem; 
+    flex: 0 0 auto; 
+  }
+
+  /* Button Groups */
+  .btn-row { 
+    display: flex; 
+    gap: 1rem; 
+    flex-wrap: wrap; 
+    align-items: center; 
+  }
+  .btn-row.center { 
+    justify-content: center; 
+  }
+
+  /* Media Elements */
+  img, svg { 
+    display: block; 
+    max-width: 100%; 
+    height: auto; 
+  }
 }
