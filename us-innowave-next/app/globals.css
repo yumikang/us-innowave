@@ -1727,9 +1727,82 @@ body:not(.homepage) .main-content {
     z-index: 1; 
   }
 
-  /* ===== 전역 미세 튜닝 유틸리티 ===== */
+  /* ===== 전역 리듬 시스템 ===== */
+
+  /* 1) 섹션 리듬 엔진 - 모든 페이지의 수직 간격 통일 */
+  :root {
+    --section-gap: clamp(56px, 6vw, 112px);
+    --container-max: 1200px;
+    --container-pad: clamp(16px, 3vw, 24px);
+  }
+
+  /* main 아래 직계 섹션들 사이에 동일 간격 부여 */
+  .main-content > :where(section, .section, .band) + :where(section, .section, .band) {
+    margin-block-start: var(--section-gap);
+  }
+
+  /* 상황별 모디파이어 */
+  .section--tight { --section-gap: clamp(32px, 4vw, 64px); }
+  .section--loose { --section-gap: clamp(80px, 8vw, 144px); }
+
+  /* CTA 다음 Footer 플러시 */
+  .main-content:has(> .cta:last-child) { padding-block-end: 0; }
+
+  /* 2) 카드/그리드 통일 시스템 */
+  .cards-grid {
+    display: grid;
+    gap: clamp(16px, 2vw, 24px);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    align-items: stretch;
+  }
+
+  .base-card {
+    --card-pad: clamp(20px, 2vw, 28px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: var(--card-pad);
+    border-radius: 12px;
+  }
+
+  /* 카드 타이포 표준 */
+  .card-title {
+    margin: 0;
+    line-height: 1.25;
+    font-weight: 600;
+  }
+
+  .card-text {
+    margin: 0;
+    opacity: 0.9;
+  }
+
+  /* 3) 본문 블록 flow 유틸리티 */
+  .flow > * + * {
+    margin-block-start: var(--flow-space, 0.75rem);
+  }
+
+  /* 4) Hero/CTA 정렬 시스템 */
+  .container {
+    width: min(var(--container-max), 92vw);
+    margin-inline: auto;
+    padding-inline: var(--container-pad);
+  }
+
+  .hero-center {
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+
+  .hero-narrow {
+    max-width: 640px;
+    margin-inline: auto;
+  }
+
+  /* ===== 기존 미세 튜닝 유틸리티 (보존) ===== */
   
-  /* 1) 카드/그리드: 높이 균일 & 내부 정렬 */
+  /* 카드/그리드: 높이 균일 & 내부 정렬 */
   .grid-stretch { 
     display: grid; 
     align-items: stretch; 
@@ -1741,24 +1814,14 @@ body:not(.homepage) .main-content {
     justify-content: space-between; 
   }
 
-  /* 2) 카드 타이포 간격(타이틀-본문 간격 표준) */
-  .card-title { 
-    margin-block: 0.25rem 0.5rem; 
-    line-height: 1.25; 
-  }
-  
-  .card-text { 
-    opacity: 0.9; 
-  }
-
-  /* 3) 아이콘 규격(일관 크기) */
+  /* 아이콘 규격 */
   .icon-12 { 
     width: 3rem; 
     height: 3rem; 
     flex: 0 0 auto; 
   }
 
-  /* 4) 버튼 묶음 간격/정렬(CTA, Hero 등 어디서나) */
+  /* 버튼 묶음 */
   .btn-row { 
     display: flex; 
     gap: 1rem; 
@@ -1770,7 +1833,7 @@ body:not(.homepage) .main-content {
     justify-content: center; 
   }
 
-  /* 5) 이미지/아이콘 인라인 간극 제거(전역) */
+  /* 이미지/아이콘 인라인 간극 제거 */
   img, svg { 
     display: block; 
     max-width: 100%; 

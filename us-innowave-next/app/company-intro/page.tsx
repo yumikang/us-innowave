@@ -38,19 +38,16 @@ export default function CompanyIntroPage() {
             <h2 className="section-title">CEO 인사말</h2>
             <p className="section-subtitle">유에스이노웨이브와 함께 성장하는 미래</p>
           </div>
-          <div className="grid-stretch">
-            <div className="content-image">
-              <div className="content-image-placeholder" style={{ borderRadius: '12px', overflow: 'hidden' }}>
-                <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="400" height="500" fill="#f3f4f6"/>
-                  <circle cx="200" cy="180" r="60" fill="#e5e7eb"/>
-                  <rect x="140" y="260" width="120" height="180" fill="#e5e7eb" rx="10"/>
-                  <text x="50%" y="50%" textAnchor="middle" fill="#9ca3af" fontSize="18">CEO Photo</text>
-                </svg>
-              </div>
+          <div className={styles.ceoSection}>
+            <div className={styles.ceoImageWrapper}>
+              <svg className={styles.ceoImage} viewBox="0 0 240 320" xmlns="http://www.w3.org/2000/svg">
+                <rect width="240" height="320" fill="#f3f4f6"/>
+                <circle cx="120" cy="100" r="40" fill="#e5e7eb"/>
+                <rect x="70" y="150" width="100" height="120" fill="#e5e7eb" rx="10"/>
+                <text x="50%" y="50%" textAnchor="middle" fill="#9ca3af" fontSize="16">CEO Photo</text>
+              </svg>
             </div>
-            <div className="content-text">
-              <div className={styles.ceoMessage}>
+            <div className={styles.ceoMessage}>
                 <p className={styles.ceoGreeting}>
                   안녕하십니까,<br/>
                   유에스이노웨이브 대표이사 김영철입니다.
@@ -71,7 +68,6 @@ export default function CompanyIntroPage() {
                 <p className={styles.ceoSignature}>
                   유에스이노웨이브 대표이사 <span>김영철</span>
                 </p>
-              </div>
             </div>
           </div>
         </div>
