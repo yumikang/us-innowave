@@ -47,7 +47,7 @@ export default function CompanyIntroPage() {
                 <text x="50%" y="50%" textAnchor="middle" fill="#9ca3af" fontSize="16">CEO Photo</text>
               </svg>
             </div>
-            <div className={styles.ceoMessage}>
+            <div className={`${styles.ceoMessage} flow`}>
                 <p className={styles.ceoGreeting}>
                   안녕하십니까,<br/>
                   유에스이노웨이브 대표이사 김영철입니다.
@@ -387,7 +387,7 @@ export default function CompanyIntroPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="cta">
+      <section className="cta cta-section">
         <div className="container">
           <div className="cta-content">
             <h2 className="cta-title">함께 성장하는 파트너</h2>

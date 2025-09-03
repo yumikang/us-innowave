@@ -1880,6 +1880,23 @@ body:not(.homepage) .main-content {
   [data-page="contact"] .page-header {
     background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
   }
+
+  /* ===== 브리지: 구 카드 → 새 카드 임시 통일 ===== */
+  /* 전환 완료 후 제거 가능 */
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-4);
+    padding: var(--spacing-6) var(--spacing-6);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  /* 동일한 높이 보장 */
+  .service-card .card-body { 
+    margin-top: var(--spacing-3); 
+  }
 }
 
 /* =====================================================

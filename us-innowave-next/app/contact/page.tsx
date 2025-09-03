@@ -185,7 +185,7 @@ export default function ContactPage() {
       </div>
 
       {/* CTA Section */}
-      <section className="cta">
+      <section className="cta cta-section">
         <div className="container">
           <div className="cta-content">
             <h2 className="cta-title">방문 상담 예약</h2>

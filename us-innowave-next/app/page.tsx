@@ -12,8 +12,8 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="hero full-bg">
-        <div className="container">
-          <div className="hero-content max-w-prose text-balance">
+        <div className="container hero-center">
+          <div className="hero-content hero-narrow text-balance">
             <h1 className="hero-title text-shadow">
               당신의 글로벌 비즈니스,<br />
               <span className="text-gradient">유에스이노웨이브</span>가<br />
@@ -39,7 +39,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="services pt-section pb-section">
+      <section id="services" className="services">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">핵심 서비스</h2>
@@ -48,9 +48,9 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="services-grid grid-stretch">
+          <div className="cards-grid">
             {/* 정책자금 컨설팅 */}
-            <div className="service-card card-flow">
+            <div className="base-card">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
@@ -66,7 +66,7 @@ export default function HomePage() {
             </div>
 
             {/* 수출 지원 */}
-            <div className="service-card card-flow">
+            <div className="base-card">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <circle cx="12" cy="12" r="10"/>
@@ -83,7 +83,7 @@ export default function HomePage() {
             </div>
 
             {/* ISO & 기업인증 */}
-            <div className="service-card card-flow">
+            <div className="base-card">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M9 11V6a3 3 0 1 1 6 0v5M3 13a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-7z"/>
@@ -100,7 +100,7 @@ export default function HomePage() {
             </div>
 
             {/* 미국 공급망 & 조달시장 */}
-            <div className="service-card card-flow">
+            <div className="base-card">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
@@ -118,7 +118,7 @@ export default function HomePage() {
             </div>
 
             {/* 현지법인 설립 */}
-            <div className="service-card card-flow">
+            <div className="base-card">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M3 21h18M3 10h18M5 6l7-3 7 3M12 6v15"/>
@@ -134,7 +134,7 @@ export default function HomePage() {
             </div>
 
             {/* 마케팅 & 영업 */}
-            <div className="service-card card-flow">
+            <div className="base-card">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
@@ -153,7 +153,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="cta pt-section pb-section">
+      <section className="cta cta-section">
         <div className="container">
           <div className="cta-content">
             <h2 className="cta-title">
