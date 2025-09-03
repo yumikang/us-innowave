@@ -178,7 +178,7 @@ export default function CompanyIntroPage() {
           </div>
           <div className="card-flow">
             <div className="service-card">
-              <div className="service-icon">
+              <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                 </svg>
@@ -190,7 +190,7 @@ export default function CompanyIntroPage() {
               </p>
             </div>
             <div className="service-card">
-              <div className="service-icon">
+              <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
                   <circle cx="9" cy="7" r="4"/>
@@ -204,7 +204,7 @@ export default function CompanyIntroPage() {
               </p>
             </div>
             <div className="service-card">
-              <div className="service-icon">
+              <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                 </svg>
@@ -216,7 +216,7 @@ export default function CompanyIntroPage() {
               </p>
             </div>
             <div className="service-card">
-              <div className="service-icon">
+              <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
                   <polyline points="22 4 12 14.01 9 11.01"/>

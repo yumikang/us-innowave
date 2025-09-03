@@ -14,12 +14,12 @@ export default function HomePage() {
       <section className="hero full-bg">
         <div className="container">
           <div className="hero-content max-w-prose text-balance">
-            <h1 className="hero-title">
+            <h1 className="hero-title text-shadow">
               당신의 글로벌 비즈니스,<br />
               <span className="text-gradient">유에스이노웨이브</span>가<br />
               현실로 만듭니다
             </h1>
-            <p className="hero-description">
+            <p className="hero-description text-shadow-light">
               정책자금부터 미국 진출까지, 기업의 성장을 위한<br />
               원스톱 솔루션을 제공합니다
             </p>

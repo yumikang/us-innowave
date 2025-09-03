@@ -23,16 +23,18 @@ const Header = () => {
             </Link>
           </div>
           
-          {/* Navigation Menu */}
-          <ul className="nav-menu">
-            {navItems.map((item) => (
-              <li key={item.href} className={`nav-item ${item.isActive ? 'active' : ''}`}>
-                <Link href={item.href} className="nav-link">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {/* Desktop Navigation Menu */}
+          <nav className="nav-desktop" aria-label="주요 메뉴">
+            <ul className="nav-menu">
+              {navItems.map((item) => (
+                <li key={item.href} className={`nav-item ${item.isActive ? 'active' : ''}`}>
+                  <Link href={item.href} className="nav-link">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
           
           {/* Mobile Menu Component */}
           <MobileNav navItems={navItems} />

@@ -72,7 +72,7 @@ export default function ServicesPage() {
           </div>
           <div className="card-flow">
             <div className="service-card">
-              <div className="service-icon">
+              <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
                 </svg>
@@ -87,7 +87,7 @@ export default function ServicesPage() {
               </p>
             </div>
             <div className="service-card">
-              <div className="service-icon">
+              <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M9 2L3 9v13h18V9l-6-7z"/>
                   <path d="M3 9h18"/>
@@ -104,7 +104,7 @@ export default function ServicesPage() {
               </p>
             </div>
             <div className="service-card">
-              <div className="service-icon">
+              <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
                   <path d="M13.73 21a2 2 0 0 1-3.46 0"/>

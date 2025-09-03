@@ -86,10 +86,11 @@ const MobileNav = ({ navItems }: MobileNavProps) => {
     <>
       {/* Mobile Menu Button */}
       <button 
-        className={`mobile-menu-btn ${isMenuOpen ? 'active' : ''}`}
+        className="nav-trigger"
         onClick={toggleMenu}
-        aria-label="메뉴 열기"
+        aria-label="모바일 메뉴 열기"
         aria-expanded={isMenuOpen}
+        aria-controls="mobileMenu"
       >
         <span></span>
         <span></span>
@@ -97,29 +98,49 @@ const MobileNav = ({ navItems }: MobileNavProps) => {
       </button>
 
       {/* Mobile Menu Overlay */}
-      {isMenuOpen && (
-        <div className="mobile-menu-overlay" onClick={() => toggleMenu()} />
-      )}
+      <div 
+        className={`mobile-menu-overlay ${isMenuOpen ? 'is-open' : ''}`}
+        onClick={() => toggleMenu()}
+        aria-hidden={!isMenuOpen}
+      />
 
-      {/* Mobile Menu */}
-      <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
-        <ul className="mobile-nav-list">
-          {navItems.map((item) => (
-            <li key={item.href} className="mobile-nav-item">
-              <Link 
-                href={item.href} 
-                className={`mobile-nav-link ${item.isActive ? 'active' : ''}`}
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  document.body.classList.remove('menu-open');
-                }}
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {/* Mobile Menu Drawer */}
+      <aside
+        id="mobileMenu"
+        className={`mobile-menu ${isMenuOpen ? 'is-open' : ''}`}
+        role="dialog"
+        aria-modal="true"
+        aria-hidden={!isMenuOpen}
+      >
+        {/* Close Button */}
+        <button
+          className="mobile-close-btn"
+          aria-label="모바일 메뉴 닫기"
+          onClick={() => toggleMenu()}
+        >
+          ✕
+        </button>
+
+        {/* Mobile Navigation */}
+        <nav aria-label="모바일 내비게이션">
+          <ul className="mobile-nav-list">
+            {navItems.map((item, index) => (
+              <li key={item.href} className="mobile-nav-item">
+                <Link 
+                  href={item.href} 
+                  className={`mobile-nav-link ${item.isActive ? 'active' : ''}`}
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    document.body.classList.remove('menu-open');
+                  }}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
     </>
   );
 };

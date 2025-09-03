@@ -21,9 +21,18 @@ const BodyClass = () => {
 
     const pageName = getPageName(pathname);
     
-    // body 클래스 및 data-page 속성 업데이트
-    document.body.className = `page-${pageName}`;
-    document.body.setAttribute('data-page', pageName);
+    // 클라이언트에서만 body 속성 업데이트 (hydration 이후)
+    if (typeof window !== 'undefined') {
+      // 기존 클래스 제거 (page-* 패턴)
+      const existingClasses = document.body.className
+        .split(' ')
+        .filter(cls => !cls.startsWith('page-'))
+        .join(' ');
+      
+      // 새 클래스 추가
+      document.body.className = `${existingClasses} page-${pageName}`.trim();
+      document.body.setAttribute('data-page', pageName);
+    }
   }, [pathname]);
 
   return null;

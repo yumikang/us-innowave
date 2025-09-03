@@ -50,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={inter.variable}>
-      <body>
+      <body suppressHydrationWarning={true}>
         <BodyClass />
         
         {/* Skip to main content link for accessibility */}
