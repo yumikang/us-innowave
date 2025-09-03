@@ -1899,4 +1899,20 @@ body:not(.homepage) .main-content {
   .text-shadow-strong { 
     text-shadow: 0 3px 15px rgba(0,0,0,0.6); 
   }
+
+  /* CTA-Footer 간격 완전 제거 (실제 DOM 구조 반영) */
+  /* 1) main 다음에 오는 footer는 항상 위여백 제거 */
+  .main-content + .footer { 
+    margin-top: 0 !important; 
+  }
+
+  /* 2) main의 마지막 섹션이 CTA면, main의 바닥 패딩을 제거 */
+  .main-content:has(> .cta:last-child) { 
+    padding-bottom: 0 !important; 
+  }
+
+  /* 3) :has 미지원 브라우저를 위한 폴백 - 홈페이지에서 CTA가 있을 때 */
+  body.page-home .main-content {
+    padding-bottom: 0 !important;
+  }
 }
