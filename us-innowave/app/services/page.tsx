@@ -238,21 +238,21 @@ export default function ServicesPage() {
             <h2 className="section-title">왜 유에스이노웨이브인가?</h2>
           </div>
           <div className="cards-grid">
-            <div className="card">
+            <div className="base-card">
               <h3 className="card-title">✅ 검증된 전문성</h3>
               <p className="card-content">
                 500건 이상의 FDA 등록 경험과 98% 이상의 승인율을 자랑합니다.
                 의료기기, 화장품, 식품 등 다양한 분야의 전문성을 보유하고 있습니다.
               </p>
             </div>
-            <div className="card">
+            <div className="base-card">
               <h3 className="card-title">⚡ 신속한 처리</h3>
               <p className="card-content">
                 체계화된 프로세스와 FDA와의 원활한 소통으로 업계 최단 기간 내 
                 등록을 완료합니다. 긴급 건의 경우 특급 서비스도 제공합니다.
               </p>
             </div>
-            <div className="card">
+            <div className="base-card">
               <h3 className="card-title">🌐 토탈 서비스</h3>
               <p className="card-content">
                 FDA 등록뿐만 아니라 U.S. Agent, 통관, 물류, 현지 마케팅까지

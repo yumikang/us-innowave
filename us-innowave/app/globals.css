@@ -1242,16 +1242,21 @@ body:not(.homepage) .main-content {
    Cards & Grids
    =================================== */
 
+/* 기존 .card 클래스도 base-card와 동일한 패딩 적용 */
 .card {
     background: white;
     border-radius: 12px;
-    padding: 32px !important;  /* 패딩 보장 */
+    padding: 32px !important;  /* 모든 카드에 일관된 패딩 */
     border: 1px solid var(--border);
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
 
 .card:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .card-title {
@@ -1734,21 +1739,16 @@ body:not(.homepage) .main-content {
     align-items: stretch;
   }
 
+  /* base-card는 .card와 동일한 스타일 사용 */
   .base-card {
+    background: white;
+    border-radius: 12px;
+    padding: 32px !important;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    padding: 32px !important;  /* 충분한 내부 패딩 - important 추가 */
-    background: white;
-    border-radius: 12px;
-    border: 1px solid rgba(226, 232, 240, 0.8);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-  }
-  
-  /* 카드 내부 패딩 보장 */
-  .base-card.card-service {
-    padding: 32px !important;
   }
   
   .base-card:hover {

@@ -104,7 +104,7 @@ export default function CompanyIntroPage() {
           </div>
           
           <div className="grid-stretch" style={{ marginTop: '48px' }}>
-            <div className="card">
+            <div className="base-card">
               <h3 className="card-title">주요 사업분야</h3>
               <ul className="content-list">
                 <li><strong>정책자금 컨설팅</strong> - 창업, R&D, 수출 등 정부지원사업</li>
@@ -113,7 +113,7 @@ export default function CompanyIntroPage() {
                 <li><strong>경영 컨설팅</strong> - 사업계획서, IR, 기술사업화</li>
               </ul>
             </div>
-            <div className="card">
+            <div className="base-card">
               <h3 className="card-title">차별화 포인트</h3>
               <ul className="content-list">
                 <li><strong>이중 전문성</strong> - 국내 정책자금 + 미국 시장 동시 지원</li>
@@ -136,7 +136,7 @@ export default function CompanyIntroPage() {
                 유에스이노웨이브는 국내 중소기업의 글로벌 진출을 돕는 
                 종합 비즈니스 컨설팅 기업입니다.
               </p>
-              <div className="card">
+              <div className="base-card">
                 <h3 className="card-title">VISION</h3>
                 <p className="card-content">
                   &ldquo;모든 기업이 글로벌 시장에서 성공할 수 있는 세상&rdquo;<br/>
@@ -144,7 +144,7 @@ export default function CompanyIntroPage() {
                   경쟁력을 갖출 수 있도록 지원합니다.
                 </p>
               </div>
-              <div className="card">
+              <div className="base-card">
                 <h3 className="card-title">MISSION</h3>
                 <p className="card-content">
                   &ldquo;기업 성장의 모든 단계에서 최적의 솔루션 제공&rdquo;<br/>
@@ -246,7 +246,7 @@ export default function CompanyIntroPage() {
               </ul>
             </div>
             <div className="content-text">
-              <div className="card">
+              <div className="base-card">
                 <h3 className="card-title">주요 성과</h3>
                 <div className={styles.achievementGrid}>
                   <div className={styles.achievementItem}>
@@ -358,7 +358,7 @@ export default function CompanyIntroPage() {
             <p className="section-subtitle">각 분야 최고의 전문가들이 함께합니다</p>
           </div>
           <div className="cards-grid">
-            <div className="card">
+            <div className="base-card">
               <h3 className="card-title">정책자금 전문가</h3>
               <p className="card-content">
                 • 전현직 정책금융기관 심사역<br/>
@@ -366,7 +366,7 @@ export default function CompanyIntroPage() {
                 • 정부지원사업 평가위원 경력
               </p>
             </div>
-            <div className="card">
+            <div className="base-card">
               <h3 className="card-title">U.S. Agent</h3>
               <p className="card-content">
                 • 미국 현지 법인 운영 경험<br/>
@@ -374,7 +374,7 @@ export default function CompanyIntroPage() {
                 • 현지 유통망 네트워크 보유
               </p>
             </div>
-            <div className="card">
+            <div className="base-card">
               <h3 className="card-title">ISO 선임심사원</h3>
               <p className="card-content">
                 • ISO 9001/14001/45001 인증심사원<br/>

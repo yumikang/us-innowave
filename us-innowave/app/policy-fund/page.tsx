@@ -219,7 +219,7 @@ export default function PolicyFundPage() {
           </div>
           
           <div className="services-grid grid-stretch" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
-            <div className="card" style={{ textAlign: 'center', padding: '24px' }}>
+            <div className="base-card" style={{ textAlign: 'center' }}>
               <div style={{ height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
                 <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--brand-primary)" strokeWidth="2">
                   <path d="M2 12h20M16 6h6a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-6m-8 0H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
@@ -231,7 +231,7 @@ export default function PolicyFundPage() {
                 창업지원, R&D, 정책자금
               </p>
             </div>
-            <div className="card" style={{ textAlign: 'center', padding: '24px' }}>
+            <div className="base-card" style={{ textAlign: 'center' }}>
               <div style={{ height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
                 <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2">
                   <rect x="3" y="8" width="18" height="12" rx="2" ry="2"/>
@@ -244,7 +244,7 @@ export default function PolicyFundPage() {
                 신용보증, 컨설팅
               </p>
             </div>
-            <div className="card" style={{ textAlign: 'center', padding: '24px' }}>
+            <div className="base-card" style={{ textAlign: 'center' }}>
               <div style={{ height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
                 <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" strokeWidth="2">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -255,7 +255,7 @@ export default function PolicyFundPage() {
                 기술평가, 기술보증
               </p>
             </div>
-            <div className="card" style={{ textAlign: 'center', padding: '24px' }}>
+            <div className="base-card" style={{ textAlign: 'center' }}>
               <div style={{ height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
                 <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ef4444" strokeWidth="2">
                   <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
@@ -266,7 +266,7 @@ export default function PolicyFundPage() {
                 수출지원, 해외진출
               </p>
             </div>
-            <div className="card" style={{ textAlign: 'center', padding: '24px' }}>
+            <div className="base-card" style={{ textAlign: 'center' }}>
               <div style={{ height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
                 <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" strokeWidth="2">
                   <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7z"/>
@@ -277,7 +277,7 @@ export default function PolicyFundPage() {
                 창업교육, 사업화
               </p>
             </div>
-            <div className="card" style={{ textAlign: 'center', padding: '24px' }}>
+            <div className="base-card" style={{ textAlign: 'center' }}>
               <div style={{ height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
                 <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" strokeWidth="2">
                   <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
@@ -288,7 +288,7 @@ export default function PolicyFundPage() {
                 정책자금 대출
               </p>
             </div>
-            <div className="card" style={{ textAlign: 'center', padding: '24px' }}>
+            <div className="base-card" style={{ textAlign: 'center' }}>
               <div style={{ height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
                 <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ec4899" strokeWidth="2">
                   <circle cx="12" cy="12" r="10"/>
@@ -302,7 +302,7 @@ export default function PolicyFundPage() {
                 소상공인 지원
               </p>
             </div>
-            <div className="card" style={{ textAlign: 'center', padding: '24px' }}>
+            <div className="base-card" style={{ textAlign: 'center' }}>
               <div style={{ height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
                 <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#84cc16" strokeWidth="2">
                   <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
@@ -315,7 +315,7 @@ export default function PolicyFundPage() {
             </div>
           </div>
 
-          <div className="card" style={{ marginTop: '32px', background: 'linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%)', border: '1px solid #bfdbfe' }}>
+          <div className="base-card" style={{ marginTop: '32px', background: 'linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%)', border: '1px solid #bfdbfe' }}>
             <h3 className="card-title">지원기관별 주요 프로그램</h3>
             <div className="content-grid">
               <ul className="content-list">
@@ -378,21 +378,21 @@ export default function PolicyFundPage() {
             <h2 className="section-title">자주 묻는 질문</h2>
           </div>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <div className="card" style={{ marginBottom: '16px' }}>
+            <div className="base-card" style={{ marginBottom: '16px' }}>
               <h3 className="card-title">Q. 컨설팅 비용은 어떻게 되나요?</h3>
               <p className="card-content">
                 기본 상담은 무료이며, 본격적인 컨설팅은 성공보수 방식으로 운영됩니다.
                 선수금 없이 자금 수주 성공 시에만 수수료를 받고 있어 부담 없이 시작하실 수 있습니다.
               </p>
             </div>
-            <div className="card" style={{ marginBottom: '16px' }}>
+            <div className="base-card" style={{ marginBottom: '16px' }}>
               <h3 className="card-title">Q. 어떤 기업이 지원 가능한가요?</h3>
               <p className="card-content">
                 예비창업자부터 중견기업까지 폭넓게 지원 가능합니다.
                 기업의 규모, 업종, 성장 단계에 따라 적합한 프로그램을 매칭해 드립니다.
               </p>
             </div>
-            <div className="card" style={{ marginBottom: '16px' }}>
+            <div className="base-card" style={{ marginBottom: '16px' }}>
               <h3 className="card-title">Q. 준비 기간은 얼마나 걸리나요?</h3>
               <p className="card-content">
                 프로그램에 따라 다르지만 평균적으로 2-3개월의 준비 기간이 필요합니다.
