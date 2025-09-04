@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd us-innowave-next && npm install && npm run build",
-  "outputDirectory": "us-innowave-next/.next",
+  "buildCommand": "cd us-innowave && npm install && npm run build",
+  "outputDirectory": "us-innowave/.next",
   "framework": null
 }
