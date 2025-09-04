@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Metadata } from 'next';
 import styles from './certification.module.css';
 
 // Note: Metadata export would be in a layout.tsx or handled differently in client components
@@ -37,8 +36,8 @@ export default function CertificationPage() {
             <h2 className="section-title">ISO 인증 종류</h2>
             <p className="section-subtitle">기업의 필요에 맞는 최적의 인증 솔루션을 제공합니다</p>
           </div>
-          <div className="card-flow">
-            <div className="service-card">
+          <div className="cards-grid">
+            <div className="base-card card-service">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M9 11l3 3L22 4"/>
@@ -57,7 +56,7 @@ export default function CertificationPage() {
                 <li>지속적 개선</li>
               </ul>
             </div>
-            <div className="service-card">
+            <div className="base-card card-service">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <circle cx="12" cy="12" r="10"/>
@@ -77,7 +76,7 @@ export default function CertificationPage() {
                 <li>친환경 이미지</li>
               </ul>
             </div>
-            <div className="service-card">
+            <div className="base-card card-service">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/>
@@ -412,7 +411,7 @@ export default function CertificationPage() {
             <h2 className="section-title">컨설팅 패키지</h2>
             <p className="section-subtitle">기업 규모와 상황에 맞는 맞춤형 컨설팅</p>
           </div>
-          <div className="card-flow">
+          <div className="cards-grid">
             <div className={styles.pricingCard}>
               <h3 className={styles.pricingTitle}>스타트업 패키지</h3>
               <p className={styles.pricingSubtitle}>소규모 기업</p>

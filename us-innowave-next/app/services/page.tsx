@@ -70,8 +70,8 @@ export default function ServicesPage() {
             <h2 className="section-title">FDA 인증 서비스</h2>
             <p className="section-subtitle">제품별 맞춤 FDA 등록 및 승인 서비스</p>
           </div>
-          <div className="card-flow">
-            <div className="service-card">
+          <div className="cards-grid">
+            <div className="base-card card-service">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
@@ -86,7 +86,7 @@ export default function ServicesPage() {
                 • MDR (Medical Device Report)
               </p>
             </div>
-            <div className="service-card">
+            <div className="base-card card-service">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M9 2L3 9v13h18V9l-6-7z"/>
@@ -103,7 +103,7 @@ export default function ServicesPage() {
                 • 라벨링 규정 준수
               </p>
             </div>
-            <div className="service-card">
+            <div className="base-card card-service">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
@@ -237,7 +237,7 @@ export default function ServicesPage() {
           <div className="section-header">
             <h2 className="section-title">왜 유에스이노웨이브인가?</h2>
           </div>
-          <div className="card-flow">
+          <div className="cards-grid">
             <div className="card">
               <h3 className="card-title">✅ 검증된 전문성</h3>
               <p className="card-content">

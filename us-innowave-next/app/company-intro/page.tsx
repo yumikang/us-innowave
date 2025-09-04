@@ -139,7 +139,7 @@ export default function CompanyIntroPage() {
               <div className="card">
                 <h3 className="card-title">VISION</h3>
                 <p className="card-content">
-                  "모든 기업이 글로벌 시장에서 성공할 수 있는 세상"<br/>
+                  &ldquo;모든 기업이 글로벌 시장에서 성공할 수 있는 세상&rdquo;<br/>
                   우리는 기업 규모에 상관없이 모든 기업이 세계 시장에서 
                   경쟁력을 갖출 수 있도록 지원합니다.
                 </p>
@@ -147,7 +147,7 @@ export default function CompanyIntroPage() {
               <div className="card">
                 <h3 className="card-title">MISSION</h3>
                 <p className="card-content">
-                  "기업 성장의 모든 단계에서 최적의 솔루션 제공"<br/>
+                  &ldquo;기업 성장의 모든 단계에서 최적의 솔루션 제공&rdquo;<br/>
                   설립부터 해외 진출까지, 기업이 필요로 하는 모든 순간에 
                   전문성과 경험을 바탕으로 함께합니다.
                 </p>
@@ -172,8 +172,8 @@ export default function CompanyIntroPage() {
             <h2 className="section-title">핵심 가치</h2>
             <p className="section-subtitle">유에스이노웨이브가 추구하는 4가지 핵심 가치</p>
           </div>
-          <div className="card-flow">
-            <div className="service-card">
+          <div className="cards-grid">
+            <div className="base-card card-service">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
@@ -185,7 +185,7 @@ export default function CompanyIntroPage() {
                 풍부한 경험을 바탕으로 컨설팅을 제공합니다
               </p>
             </div>
-            <div className="service-card">
+            <div className="base-card card-service">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
@@ -199,7 +199,7 @@ export default function CompanyIntroPage() {
                 고객과의 신뢰 관계를 구축합니다
               </p>
             </div>
-            <div className="service-card">
+            <div className="base-card card-service">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
@@ -211,7 +211,7 @@ export default function CompanyIntroPage() {
                 새로운 솔루션을 개발하고 제공합니다
               </p>
             </div>
-            <div className="service-card">
+            <div className="base-card card-service">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
@@ -277,7 +277,7 @@ export default function CompanyIntroPage() {
             <h2 className="section-title">법률자문</h2>
             <p className="section-subtitle">국내외 법률 전문가와 함께하는 안전한 비즈니스</p>
           </div>
-          <div className="card-flow">
+          <div className="cards-grid">
             <div className={styles.legalCard} style={{ background: 'linear-gradient(135deg, #fef3c7 0%, #fef9e7 100%)', border: '1px solid #fde68a' }}>
               <div className="service-icon" style={{ background: '#fbbf24', color: 'white' }}>
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -357,7 +357,7 @@ export default function CompanyIntroPage() {
             <h2 className="section-title">전문가 그룹</h2>
             <p className="section-subtitle">각 분야 최고의 전문가들이 함께합니다</p>
           </div>
-          <div className="card-flow">
+          <div className="cards-grid">
             <div className="card">
               <h3 className="card-title">정책자금 전문가</h3>
               <p className="card-content">

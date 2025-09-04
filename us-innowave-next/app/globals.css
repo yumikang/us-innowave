@@ -1924,6 +1924,12 @@ body:not(.homepage) .main-content {
    Layer: utilities
    =================================== */
 @layer utilities {
+  /* Image Aspect Ratios */
+  .ratio-16x9 { aspect-ratio: 16 / 9; }
+  .ratio-4x3  { aspect-ratio: 4 / 3; }
+  .ratio-1x1  { aspect-ratio: 1 / 1; }
+  .object-cover { object-fit: cover; }
+  
   /* Grid & Layout */
   .grid-stretch { 
     display: grid; 

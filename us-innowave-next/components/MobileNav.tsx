@@ -15,13 +15,11 @@ interface MobileNavProps {
 
 const MobileNav = ({ navItems }: MobileNavProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   // Handle scroll for header shadow
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY > 0;
-      setIsScrolled(scrolled);
       
       // Update header class
       const header = document.querySelector('.header');
@@ -124,7 +122,7 @@ const MobileNav = ({ navItems }: MobileNavProps) => {
         {/* Mobile Navigation */}
         <nav aria-label="모바일 내비게이션">
           <ul className="mobile-nav-list">
-            {navItems.map((item, index) => (
+            {navItems.map((item) => (
               <li key={item.href} className="mobile-nav-item">
                 <Link 
                   href={item.href} 
