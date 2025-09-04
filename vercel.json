@@ -1,6 +1,4 @@
 {
   "rootDirectory": "us-innowave-next",
-  "framework": "nextjs",
-  "buildCommand": "npm run build",
-  "outputDirectory": ".next"
+  "framework": "nextjs"
 }
