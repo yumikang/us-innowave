@@ -1,0 +1,225 @@
+/* Company Intro Page CSS Module */
+@layer components {
+  /* CEO Message Section */
+  .ceoSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-12);  /* 48px */
+    margin-block: var(--section-y);
+  }
+
+  /* CEO Photo Container */
+  .ceoImageWrapper {
+    width: 240px;
+    height: 320px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background: var(--gray-100);
+  }
+
+  .ceoImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* CEO Message Box */
+  .ceoMessage {
+    background: linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%);
+    border: 1px solid #e0f2fe;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-16);  /* 64px - 적절한 여백 */
+    max-width: 800px;
+    margin-inline: auto;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .ceoGreeting {
+    font-size: var(--body-lg);
+    line-height: var(--leading-loose);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-6);  /* 24px */
+    font-weight: 500;
+  }
+  
+  .ceoText {
+    line-height: var(--leading-loose);
+    margin-bottom: var(--spacing-6);  /* 24px */
+    color: var(--text-secondary);
+    font-size: var(--body);
+  }
+
+  .ceoText:last-of-type {
+    margin-bottom: var(--spacing-8);  /* 32px - 서명 앞 여백 */
+  }
+  
+  .ceoSignature {
+    text-align: right;
+    margin-top: var(--spacing-8);
+    padding-top: var(--spacing-6);
+    border-top: 1px solid var(--border-subtle);
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  .ceoSignature span {
+    font-size: var(--h4);
+    color: var(--brand-primary);
+    margin-left: var(--spacing-2);
+  }
+
+  /* Company Overview */
+  .overviewGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .overviewCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .overviewCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  
+  .overviewNumber {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  .overviewCard h4 {
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+  }
+  
+  .overviewCard p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Achievement */
+  .achievementGrid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .achievementItem {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.5rem;
+    background: var(--background-subtle);
+    border-radius: 8px;
+  }
+  
+  .achievementNumber {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+    border-radius: 12px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.125rem;
+    flex-shrink: 0;
+  }
+  
+  .achievementItem h4 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+  }
+  
+  .achievementItem p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Legal Cards */
+  .legalCard {
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .legalCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  /* Legal Services */
+  .legalServices {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #f8fafc;
+    border: 2px solid var(--brand-primary);
+    border-radius: 12px;
+  }
+  
+  .legalServices h3 {
+    color: var(--brand-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .overviewGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .ceoMessage {
+      padding: var(--spacing-10);  /* 40px - 모바일에서도 충분한 여백 */
+    }
+
+    .ceoImageWrapper {
+      width: 180px;
+      height: 240px;
+    }
+
+    .ceoSection {
+      gap: var(--spacing-8);  /* 32px */
+    }
+    
+    .achievementItem {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .overviewGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

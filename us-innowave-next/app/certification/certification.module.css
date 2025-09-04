@@ -1,0 +1,311 @@
+/* Certification Page CSS Module */
+@layer components {
+  /* Process Timeline */
+  .processTimeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .timelineItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .timelineItem:hover {
+    transform: translateY(-5px);
+  }
+  
+  .timelineMarker {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  .timelineContent h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+  }
+  
+  .timelineContent p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Features Grid */
+  .featuresGrid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .featureItem {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .featureItem:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  }
+  
+  .featureNumber {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+    border-radius: 12px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.125rem;
+    flex-shrink: 0;
+  }
+  
+  .featureTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+  }
+  
+  .featureDescription {
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* Enterprise Section */
+  .enterpriseSection {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 0;
+  }
+
+  /* Certification Tabs */
+  .certTabs {
+    margin-top: 3rem;
+  }
+  
+  .certTabButtons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .certTabBtn {
+    padding: 0.75rem 1.5rem;
+    background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.3);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .certTabBtn:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+  }
+  
+  .certTabBtn.active {
+    background: white;
+    color: #764ba2;
+    border-color: white;
+  }
+  
+  .certTabContent {
+    display: none;
+  }
+  
+  .certTabContent.active {
+    display: block;
+  }
+  
+  .certCard {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  .certCard h3 {
+    color: white;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .certInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .certSummary h4,
+  .certProcess h4 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+  
+  .certSummary p {
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .certBenefits {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .certBenefits li {
+    color: rgba(255,255,255,0.95);
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+  }
+  
+  .certProcess ol {
+    counter-reset: step-counter;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .certProcess ol li {
+    counter-increment: step-counter;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+  }
+  
+  .certProcess ol li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
+  
+  .btnWhite {
+    background: white;
+    color: #764ba2;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    display: inline-block;
+    text-align: center;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .btnWhite:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    text-decoration: none;
+  }
+
+  /* Pricing Cards */
+  .pricingCard {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .pricingCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  
+  .pricingTitle {
+    color: var(--brand-primary);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .pricingSubtitle {
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .processTimeline {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .processTimeline {
+      grid-template-columns: 1fr;
+    }
+
+    .featuresGrid {
+      gap: 1rem;
+    }
+
+    .featureItem {
+      padding: 1.5rem;
+    }
+
+    .certInfo {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .certTabButtons {
+      flex-direction: column;
+    }
+    
+    .certTabBtn {
+      width: 100%;
+    }
+
+    .certCard {
+      padding: 1.5rem;
+    }
+  }
+}

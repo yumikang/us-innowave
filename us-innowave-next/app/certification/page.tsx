@@ -1,0 +1,485 @@
+'use client';
+
+import { useState } from 'react';
+import Link from 'next/link';
+import styles from './certification.module.css';
+
+// Note: Metadata export would be in a layout.tsx or handled differently in client components
+// For SEO, you might want to create this as a Server Component or handle metadata differently
+
+export default function CertificationPage() {
+  const [activeTab, setActiveTab] = useState('cert1');
+
+  const showCertTab = (tabId: string) => {
+    setActiveTab(tabId);
+  };
+
+  return (
+    <>
+      {/* Page Header */}
+      <section className="page-header">
+        <div className="container">
+          <h1 className="page-title">ISO & 기업인증</h1>
+          <p className="page-subtitle">국제 표준 인증과 정부 기업인증으로 경쟁력을 높입니다</p>
+          <div className="breadcrumb">
+            <Link href="/">HOME</Link>
+            <span>/</span>
+            <span>ISO & 기업인증</span>
+          </div>
+        </div>
+      </section>
+
+      {/* ISO Types Section */}
+      <section className="content-section">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">ISO 인증 종류</h2>
+            <p className="section-subtitle">기업의 필요에 맞는 최적의 인증 솔루션을 제공합니다</p>
+          </div>
+          <div className="cards-grid">
+            <div className="base-card card-service">
+              <div className="service-icon icon-12">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M9 11l3 3L22 4"/>
+                  <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                </svg>
+              </div>
+              <h3 className="service-title">ISO 9001</h3>
+              <h4 style={{ color: 'var(--brand-secondary)', marginBottom: '1rem' }}>품질경영시스템</h4>
+              <p className="service-description">
+                고객 만족과 품질 향상을 위한 체계적인 경영시스템 구축
+              </p>
+              <ul className="feature-list">
+                <li>프로세스 개선</li>
+                <li>고객만족도 향상</li>
+                <li>품질관리 체계화</li>
+                <li>지속적 개선</li>
+              </ul>
+            </div>
+            <div className="base-card card-service">
+              <div className="service-icon icon-12">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M2 12h20"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </div>
+              <h3 className="service-title">ISO 14001</h3>
+              <h4 style={{ color: 'var(--brand-secondary)', marginBottom: '1rem' }}>환경경영시스템</h4>
+              <p className="service-description">
+                환경 보호와 지속가능한 경영을 위한 국제 표준 인증
+              </p>
+              <ul className="feature-list">
+                <li>환경 리스크 관리</li>
+                <li>법규 준수</li>
+                <li>자원 효율성</li>
+                <li>친환경 이미지</li>
+              </ul>
+            </div>
+            <div className="base-card card-service">
+              <div className="service-icon icon-12">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/>
+                </svg>
+              </div>
+              <h3 className="service-title">ISO 45001</h3>
+              <h4 style={{ color: 'var(--brand-secondary)', marginBottom: '1rem' }}>안전보건경영시스템</h4>
+              <p className="service-description">
+                안전하고 건강한 작업 환경 조성을 위한 관리 시스템
+              </p>
+              <ul className="feature-list">
+                <li>산업재해 예방</li>
+                <li>법적 책임 최소화</li>
+                <li>근로자 안전</li>
+                <li>생산성 향상</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="content-section" style={{ backgroundColor: 'var(--background-subtle)' }}>
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">ISO 인증 프로세스</h2>
+            <p className="section-subtitle">체계적인 프로세스로 빠르고 확실한 인증 취득을 지원합니다</p>
+          </div>
+          <div className={styles.processTimeline}>
+            <div className={styles.timelineItem}>
+              <div className={styles.timelineMarker}>1</div>
+              <div className={styles.timelineContent}>
+                <h3>현황 진단</h3>
+                <p>기업 현황 분석 및 Gap 분석</p>
+              </div>
+            </div>
+            <div className={styles.timelineItem}>
+              <div className={styles.timelineMarker}>2</div>
+              <div className={styles.timelineContent}>
+                <h3>문서화</h3>
+                <p>매뉴얼 및 절차서 작성</p>
+              </div>
+            </div>
+            <div className={styles.timelineItem}>
+              <div className={styles.timelineMarker}>3</div>
+              <div className={styles.timelineContent}>
+                <h3>교육</h3>
+                <p>내부심사원 교육 및 전사 교육</p>
+              </div>
+            </div>
+            <div className={styles.timelineItem}>
+              <div className={styles.timelineMarker}>4</div>
+              <div className={styles.timelineContent}>
+                <h3>내부심사</h3>
+                <p>시스템 운영 및 개선사항 도출</p>
+              </div>
+            </div>
+            <div className={styles.timelineItem}>
+              <div className={styles.timelineMarker}>5</div>
+              <div className={styles.timelineContent}>
+                <h3>인증심사</h3>
+                <p>인증기관 심사 및 시정조치</p>
+              </div>
+            </div>
+            <div className={styles.timelineItem}>
+              <div className={styles.timelineMarker}>6</div>
+              <div className={styles.timelineContent}>
+                <h3>인증취득</h3>
+                <p>인증서 발급 및 사후관리</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="content-section">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">인증 취득 효과</h2>
+            <p className="section-subtitle">ISO 인증으로 얻을 수 있는 다양한 비즈니스 가치</p>
+          </div>
+          <div className={styles.featuresGrid}>
+            <div className={styles.featureItem}>
+              <div className={styles.featureNumber}>01</div>
+              <div>
+                <h4 className={styles.featureTitle}>대외 신뢰도 향상</h4>
+                <p className={styles.featureDescription}>국제 표준 인증으로 기업 이미지와 브랜드 가치 상승</p>
+              </div>
+            </div>
+            <div className={styles.featureItem}>
+              <div className={styles.featureNumber}>02</div>
+              <div>
+                <h4 className={styles.featureTitle}>경쟁 우위 확보</h4>
+                <p className={styles.featureDescription}>입찰 가점 및 우선협상대상자 선정 시 유리</p>
+              </div>
+            </div>
+            <div className={styles.featureItem}>
+              <div className={styles.featureNumber}>03</div>
+              <div>
+                <h4 className={styles.featureTitle}>업무 효율성 증대</h4>
+                <p className={styles.featureDescription}>체계적인 프로세스로 생산성 향상 및 비용 절감</p>
+              </div>
+            </div>
+            <div className={styles.featureItem}>
+              <div className={styles.featureNumber}>04</div>
+              <div>
+                <h4 className={styles.featureTitle}>리스크 관리</h4>
+                <p className={styles.featureDescription}>예방 중심의 관리로 사고 예방 및 손실 최소화</p>
+              </div>
+            </div>
+            <div className={styles.featureItem}>
+              <div className={styles.featureNumber}>05</div>
+              <div>
+                <h4 className={styles.featureTitle}>글로벌 진출 기반</h4>
+                <p className={styles.featureDescription}>해외 거래처 요구사항 충족 및 수출 경쟁력 강화</p>
+              </div>
+            </div>
+            <div className={styles.featureItem}>
+              <div className={styles.featureNumber}>06</div>
+              <div>
+                <h4 className={styles.featureTitle}>지속적 개선</h4>
+                <p className={styles.featureDescription}>PDCA 사이클을 통한 지속적인 성장과 발전</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enterprise Certifications Section */}
+      <section className={styles.enterpriseSection}>
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title" style={{ color: 'white' }}>정부 기업인증</h2>
+            <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.9)' }}>
+              정부가 인정하는 우수기업 인증으로 각종 혜택과 지원을 받으세요
+            </p>
+          </div>
+          
+          {/* Certification Tabs */}
+          <div className={styles.certTabs}>
+            <div className={styles.certTabButtons}>
+              <button 
+                className={`${styles.certTabBtn} ${activeTab === 'cert1' ? styles.active : ''}`}
+                onClick={() => showCertTab('cert1')}
+              >
+                기업부설연구소
+              </button>
+              <button 
+                className={`${styles.certTabBtn} ${activeTab === 'cert2' ? styles.active : ''}`}
+                onClick={() => showCertTab('cert2')}
+              >
+                벤처기업
+              </button>
+              <button 
+                className={`${styles.certTabBtn} ${activeTab === 'cert3' ? styles.active : ''}`}
+                onClick={() => showCertTab('cert3')}
+              >
+                이노비즈
+              </button>
+              <button 
+                className={`${styles.certTabBtn} ${activeTab === 'cert4' ? styles.active : ''}`}
+                onClick={() => showCertTab('cert4')}
+              >
+                메인비즈
+              </button>
+              <button 
+                className={`${styles.certTabBtn} ${activeTab === 'cert5' ? styles.active : ''}`}
+                onClick={() => showCertTab('cert5')}
+              >
+                사회적기업
+              </button>
+            </div>
+            
+            {/* Tab Contents */}
+            <div className={`${styles.certTabContent} ${activeTab === 'cert1' ? styles.active : ''}`}>
+              <div className={styles.certCard}>
+                <h3>기업부설연구소</h3>
+                <div className={styles.certInfo}>
+                  <div className={styles.certSummary}>
+                    <h4>인증 개요</h4>
+                    <p>기업이 자체 R&D 역량을 갖추고 체계적인 연구개발 활동을 수행하는 조직을 보유한 경우 한국산업기술진흥협회(KOITA)에서 인정하는 인증</p>
+                    <ul className={styles.certBenefits}>
+                      <li>✓ 연구개발비 세액공제 확대 (최대 50%)</li>
+                      <li>✓ 연구전담요원 병역특례 지정</li>
+                      <li>✓ 정부 R&D 과제 가점</li>
+                      <li>✓ 기술개발 자금 지원 우대</li>
+                    </ul>
+                  </div>
+                  <div className={styles.certProcess}>
+                    <h4>인증 절차</h4>
+                    <ol>
+                      <li>설립 요건 검토 (연구원 3명 이상, 독립공간)</li>
+                      <li>연구소 설립 준비 (정관, 운영규정)</li>
+                      <li>온라인 신청서 작성</li>
+                      <li>서류 심사 및 현장실사</li>
+                      <li>인증서 발급 (약 2-3주)</li>
+                    </ol>
+                  </div>
+                </div>
+                <a href="#contact-form" className={styles.btnWhite}>무료 상담 신청</a>
+              </div>
+            </div>
+            
+            <div className={`${styles.certTabContent} ${activeTab === 'cert2' ? styles.active : ''}`}>
+              <div className={styles.certCard}>
+                <h3>벤처기업 인증</h3>
+                <div className={styles.certInfo}>
+                  <div className={styles.certSummary}>
+                    <h4>인증 개요</h4>
+                    <p>기술성과 성장성이 우수한 중소기업을 벤처기업으로 확인하여 각종 지원혜택을 제공하는 제도</p>
+                    <ul className={styles.certBenefits}>
+                      <li>✓ 법인세·소득세 50% 감면 (5년간)</li>
+                      <li>✓ 증권거래세 면제</li>
+                      <li>✓ 스톡옵션 부여 범위 확대</li>
+                      <li>✓ 정부 지원사업 우대</li>
+                      <li>✓ 특허 우선심사</li>
+                    </ul>
+                  </div>
+                  <div className={styles.certProcess}>
+                    <h4>인증 절차</h4>
+                    <ol>
+                      <li>유형 선택 (기술평가보증, 연구개발, 투자)</li>
+                      <li>자격 요건 확인</li>
+                      <li>온라인 신청 (벤처인)</li>
+                      <li>평가 및 심사</li>
+                      <li>벤처확인서 발급 (약 2-4주)</li>
+                    </ol>
+                  </div>
+                </div>
+                <a href="#contact-form" className={styles.btnWhite}>무료 상담 신청</a>
+              </div>
+            </div>
+            
+            <div className={`${styles.certTabContent} ${activeTab === 'cert3' ? styles.active : ''}`}>
+              <div className={styles.certCard}>
+                <h3>이노비즈 (INNOBIZ)</h3>
+                <div className={styles.certInfo}>
+                  <div className={styles.certSummary}>
+                    <h4>인증 개요</h4>
+                    <p>기술혁신형 중소기업(Innovation+Business)으로 기술 우위를 바탕으로 경쟁력을 확보한 기업 인증</p>
+                    <ul className={styles.certBenefits}>
+                      <li>✓ 정책자금 금리 우대 (0.3%p)</li>
+                      <li>✓ 보증한도 우대 (최대 70억원)</li>
+                      <li>✓ R&D 지원사업 가점</li>
+                      <li>✓ 조달청 물품구매 적격심사 가점</li>
+                      <li>✓ 병역특례 추천 우대</li>
+                    </ul>
+                  </div>
+                  <div className={styles.certProcess}>
+                    <h4>인증 절차</h4>
+                    <ol>
+                      <li>자가진단 (온라인 시스템)</li>
+                      <li>온라인 신청 및 기술평가</li>
+                      <li>현장평가 (기술·경영혁신)</li>
+                      <li>종합평가 (650점 이상)</li>
+                      <li>인증서 발급 (약 4-6주)</li>
+                    </ol>
+                  </div>
+                </div>
+                <a href="#contact-form" className={styles.btnWhite}>무료 상담 신청</a>
+              </div>
+            </div>
+            
+            <div className={`${styles.certTabContent} ${activeTab === 'cert4' ? styles.active : ''}`}>
+              <div className={styles.certCard}>
+                <h3>메인비즈 (MAINBIZ)</h3>
+                <div className={styles.certInfo}>
+                  <div className={styles.certSummary}>
+                    <h4>인증 개요</h4>
+                    <p>경영혁신형 중소기업(Management Innovation)으로 경영혁신 활동과 성과가 우수한 기업 인증</p>
+                    <ul className={styles.certBenefits}>
+                      <li>✓ 신용보증 한도 우대</li>
+                      <li>✓ 정책자금 지원 우대</li>
+                      <li>✓ 수출지원사업 우선 선정</li>
+                      <li>✓ 공공입찰 가점</li>
+                      <li>✓ 광고비 세액공제</li>
+                    </ul>
+                  </div>
+                  <div className={styles.certProcess}>
+                    <h4>인증 절차</h4>
+                    <ol>
+                      <li>자가진단 실시</li>
+                      <li>온라인 신청</li>
+                      <li>경영혁신능력 평가</li>
+                      <li>현장평가 실시</li>
+                      <li>인증서 발급 (약 4-6주)</li>
+                    </ol>
+                  </div>
+                </div>
+                <a href="#contact-form" className={styles.btnWhite}>무료 상담 신청</a>
+              </div>
+            </div>
+            
+            <div className={`${styles.certTabContent} ${activeTab === 'cert5' ? styles.active : ''}`}>
+              <div className={styles.certCard}>
+                <h3>사회적기업</h3>
+                <div className={styles.certInfo}>
+                  <div className={styles.certSummary}>
+                    <h4>인증 개요</h4>
+                    <p>사회적 목적을 추구하면서 영업활동을 수행하는 기업으로, 취약계층 일자리 창출과 사회서비스 제공</p>
+                    <ul className={styles.certBenefits}>
+                      <li>✓ 인건비 지원 (최대 3년)</li>
+                      <li>✓ 사업개발비 지원 (연 1억원)</li>
+                      <li>✓ 법인세·소득세 50% 감면</li>
+                      <li>✓ 공공기관 우선구매</li>
+                      <li>✓ 시설비 지원</li>
+                    </ul>
+                  </div>
+                  <div className={styles.certProcess}>
+                    <h4>인증 절차</h4>
+                    <ol>
+                      <li>인증 요건 확인 (조직형태, 유급근로자)</li>
+                      <li>인증 신청서 제출</li>
+                      <li>신청기관 검토 및 현장실사</li>
+                      <li>인증심사위원회 심의</li>
+                      <li>고용노동부 인증 (약 3-4개월)</li>
+                    </ol>
+                  </div>
+                </div>
+                <a href="#contact-form" className={styles.btnWhite}>무료 상담 신청</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="content-section" style={{ backgroundColor: 'var(--background-subtle)' }}>
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">컨설팅 패키지</h2>
+            <p className="section-subtitle">기업 규모와 상황에 맞는 맞춤형 컨설팅</p>
+          </div>
+          <div className="cards-grid">
+            <div className={styles.pricingCard}>
+              <h3 className={styles.pricingTitle}>스타트업 패키지</h3>
+              <p className={styles.pricingSubtitle}>소규모 기업</p>
+              <ul className="feature-list">
+                <li>기본 문서화 지원</li>
+                <li>핵심 프로세스 구축</li>
+                <li>내부심사원 1명 교육</li>
+                <li>인증심사 대응</li>
+                <li>3개월 사후관리</li>
+              </ul>
+              <a href="#contact-form" className="btn btn-primary btn-block" style={{ marginTop: '2rem' }}>상담 신청</a>
+            </div>
+            <div className={styles.pricingCard}>
+              <h3 className={styles.pricingTitle}>스탠다드 패키지</h3>
+              <p className={styles.pricingSubtitle}>중견 기업</p>
+              <ul className="feature-list">
+                <li>전체 문서화 지원</li>
+                <li>전 부서 프로세스 구축</li>
+                <li>내부심사원 3명 교육</li>
+                <li>모의심사 실시</li>
+                <li>인증심사 대응</li>
+                <li>6개월 사후관리</li>
+              </ul>
+              <a href="#contact-form" className="btn btn-primary btn-block" style={{ marginTop: '2rem' }}>상담 신청</a>
+            </div>
+            <div className={styles.pricingCard}>
+              <h3 className={styles.pricingTitle}>프리미엄 패키지</h3>
+              <p className={styles.pricingSubtitle}>대기업</p>
+              <ul className="feature-list">
+                <li>통합경영시스템 구축</li>
+                <li>전사 프로세스 최적화</li>
+                <li>내부심사원 5명 교육</li>
+                <li>경영검토 지원</li>
+                <li>인증심사 전과정 대응</li>
+                <li>12개월 사후관리</li>
+              </ul>
+              <a href="#contact-form" className="btn btn-primary btn-block" style={{ marginTop: '2rem' }}>상담 신청</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section id="contact-form" className="cta">
+        <div className="container">
+          <div className="cta-content">
+            <h2 className="cta-title">ISO 인증 상담 신청</h2>
+            <p className="cta-description">
+              전문가의 무료 상담을 받아보세요
+            </p>
+            <div className="cta-form">
+              <input type="text" placeholder="기업명" className="cta-input" />
+              <input type="text" placeholder="담당자명" className="cta-input" />
+              <input type="tel" placeholder="연락처" className="cta-input" />
+              <input type="email" placeholder="이메일" className="cta-input" />
+              <select className="cta-input" style={{ gridColumn: 'span 2' }}>
+                <option value="">희망 인증 종류를 선택하세요</option>
+                <option value="iso9001">ISO 9001 (품질경영시스템)</option>
+                <option value="iso14001">ISO 14001 (환경경영시스템)</option>
+                <option value="iso45001">ISO 45001 (안전보건경영시스템)</option>
+                <option value="multiple">복수 인증 (통합경영시스템)</option>
+                <option value="other">기타 ISO 인증</option>
+              </select>
+              <button className="btn btn-primary btn-lg cta-button">무료 상담 신청</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
