@@ -970,17 +970,19 @@ body:not(.homepage) .main-content {
     background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
     border-radius: 12px;
     color: var(--brand-primary);
+    margin-bottom: 1.25rem;  /* 아이콘 아래 여백 추가 */
 }
 
 .service-title {
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--gray-900);
+    margin-bottom: 1rem;  /* 제목 아래 여백 추가 */
 }
 
 .service-description {
     color: var(--gray-600);
-    line-height: 1.6;
+    line-height: 1.8;  /* 줄간격 약간 증가 */
     flex-grow: 1;
 }
 
@@ -990,6 +992,7 @@ body:not(.homepage) .main-content {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    margin-top: 1.25rem;  /* 상단 여백 추가 */
     transition: gap 0.2s ease;
 }
 
@@ -1242,7 +1245,7 @@ body:not(.homepage) .main-content {
 .card {
     background: white;
     border-radius: 12px;
-    padding: 32px;
+    padding: 32px !important;  /* 패딩 보장 */
     border: 1px solid var(--border);
     transition: all 0.3s ease;
 }
@@ -1616,20 +1619,8 @@ body:not(.homepage) .main-content {
     scroll-margin-top: var(--header-h, 80px); 
   }
   
-  /* 카드 컴포넌트 공통 클래스 */
-  .base-card {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    border: 1px solid rgba(226, 232, 240, 0.8);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-  }
-  
-  .base-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  }
+  /* 카드 컴포넌트 공통 클래스 - 아래 1746번 라인에서 통합 정의됨 */
+  /* .base-card 스타일은 line 1746에서 정의 */
   
   .card-title {
     font-size: 1.25rem;
@@ -1744,12 +1735,25 @@ body:not(.homepage) .main-content {
   }
 
   .base-card {
-    --card-pad: clamp(20px, 2vw, 28px);
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
-    padding: var(--card-pad);
+    gap: 1.25rem;
+    padding: 32px !important;  /* 충분한 내부 패딩 - important 추가 */
+    background: white;
     border-radius: 12px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  /* 카드 내부 패딩 보장 */
+  .base-card.card-service {
+    padding: 32px !important;
+  }
+  
+  .base-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   }
 
   /* 카드 타이포 표준 */
