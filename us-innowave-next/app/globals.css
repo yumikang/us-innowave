@@ -434,7 +434,8 @@ img {
     position: fixed;
     inset: 0 0 0 auto; /* right off-canvas */
     width: min(78vw, 360px);
-    height: 100dvh;
+    height: 100vh;   /* fallback */
+    height: 100dvh;  /* modern viewport unit */
     background: var(--background-default);
     box-shadow: calc(var(--spacing-6) * -1) 0 var(--spacing-12) rgba(0,0,0,.12);
     transform: translateX(100%);
@@ -1029,7 +1030,7 @@ body:not(.homepage) .main-content {
 .feature-item {
     display: flex;
     gap: 24px;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .feature-number {
@@ -1679,6 +1680,7 @@ body:not(.homepage) .main-content {
   
   /* 추가 유틸리티 클래스 */
   .text-balance { 
+    overflow-wrap: anywhere; /* fallback for older engines */
     text-wrap: balance; 
   }
   
@@ -1791,7 +1793,8 @@ body:not(.homepage) .main-content {
 
   .hero-center {
     display: grid;
-    place-items: center;
+    align-items: center;
+    justify-items: center;
     text-align: center;
   }
 
