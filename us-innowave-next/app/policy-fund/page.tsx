@@ -24,7 +24,7 @@ export default function PolicyFundPage() {
       </section>
 
       {/* Service Introduction */}
-      <section className="content-section pt-section pb-section">
+      <section className="content-section">
         <div className="container">
           <div className="content-grid">
             <div className="content-text">
@@ -55,7 +55,7 @@ export default function PolicyFundPage() {
       </section>
 
       {/* Funding Types */}
-      <section className="content-section pt-section pb-section">
+      <section className="content-section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">지원 가능한 정책자금</h2>
@@ -64,7 +64,7 @@ export default function PolicyFundPage() {
           
           {/* Primary 3 Funding Types */}
           <div className="services-grid grid-stretch">
-            <div className="service-card card-flow" style={{ border: '2px solid var(--brand-primary)' }}>
+            <div className="base-card card-service" style={{ border: '2px solid var(--brand-primary)' }}>
               <div className="service-icon icon-12" style={{ background: 'var(--brand-primary)', color: 'white' }}>
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M12 2L2 7l10 5 10-5-10-5z"/>
@@ -87,7 +87,7 @@ export default function PolicyFundPage() {
               </div>
             </div>
 
-            <div className="service-card card-flow" style={{ border: '2px solid var(--brand-secondary)' }}>
+            <div className="base-card card-service" style={{ border: '2px solid var(--brand-secondary)' }}>
               <div className="service-icon icon-12" style={{ background: 'var(--brand-secondary)', color: 'white' }}>
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
@@ -109,7 +109,7 @@ export default function PolicyFundPage() {
               </div>
             </div>
 
-            <div className="service-card card-flow" style={{ border: '2px solid var(--brand-accent)' }}>
+            <div className="base-card card-service" style={{ border: '2px solid var(--brand-accent)' }}>
               <div className="service-icon icon-12" style={{ background: 'var(--brand-accent)', color: 'white' }}>
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M3 21h18"/>
@@ -137,7 +137,7 @@ export default function PolicyFundPage() {
 
           {/* Additional Funding Types */}
           <div className="content-grid" style={{ marginTop: '32px' }}>
-            <div className="card card-flow">
+            <div className="base-card">
               <h3 className="card-title">R&D 자금</h3>
               <ul className="content-list">
                 <li>중소기업 기술혁신 (최대 5억원)</li>
@@ -146,7 +146,7 @@ export default function PolicyFundPage() {
                 <li>그린뉴딜 기술개발 (최대 30억원)</li>
               </ul>
             </div>
-            <div className="card card-flow">
+            <div className="base-card">
               <h3 className="card-title">수출지원금</h3>
               <ul className="content-list">
                 <li>수출바우처 (최대 5천만원)</li>
@@ -160,7 +160,7 @@ export default function PolicyFundPage() {
       </section>
 
       {/* Consulting Process */}
-      <section id="process" className="content-section pt-section pb-section">
+      <section id="process" className="content-section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">컨설팅 프로세스</h2>
@@ -211,7 +211,7 @@ export default function PolicyFundPage() {
       </section>
 
       {/* Support Organizations */}
-      <section className="content-section pt-section pb-section">
+      <section className="content-section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">주요 지원기관</h2>
@@ -336,14 +336,14 @@ export default function PolicyFundPage() {
       </section>
 
       {/* Success Cases */}
-      <section className="content-section pt-section pb-section">
+      <section className="content-section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">정책자금 유치 사례</h2>
             <p className="section-subtitle">유에스이노웨이브와 함께 정책자금을 성공적으로 유치한 기업들</p>
           </div>
           <div className="services-grid grid-stretch">
-            <div className="card card-flow">
+            <div className="base-card">
               <h3 className="card-title">A사 - IT 스타트업</h3>
               <p className="card-content">
                 <strong>지원 프로그램:</strong> TIPS 프로그램<br/>
@@ -351,7 +351,7 @@ export default function PolicyFundPage() {
                 <strong>성과:</strong> 글로벌 진출 및 시리즈A 투자 유치
               </p>
             </div>
-            <div className="card card-flow">
+            <div className="base-card">
               <h3 className="card-title">B사 - 제조업</h3>
               <p className="card-content">
                 <strong>지원 프로그램:</strong> 소재부품장비 기술개발<br/>
@@ -359,7 +359,7 @@ export default function PolicyFundPage() {
                 <strong>성과:</strong> 국산화 성공 및 매출 200% 성장
               </p>
             </div>
-            <div className="card card-flow">
+            <div className="base-card">
               <h3 className="card-title">C사 - 바이오</h3>
               <p className="card-content">
                 <strong>지원 프로그램:</strong> 혁신형 제약기업<br/>
@@ -372,7 +372,7 @@ export default function PolicyFundPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="content-section pt-section pb-section">
+      <section className="content-section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">자주 묻는 질문</h2>
@@ -404,7 +404,7 @@ export default function PolicyFundPage() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="cta pt-section pb-section">
+      <section id="contact" className="cta cta-section">
         <div className="container">
           <div className="cta-content">
             <h2 className="cta-title">정책자금 무료 진단 받기</h2>

@@ -11,7 +11,7 @@ export default function USMarketPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="page-header pt-section pb-section">
+      <section className="page-header">
         <div className="container">
           <h1 className="page-title">미국 공급망 & 조달시장</h1>
           <p className="page-subtitle">연간 700조원 규모의 미국 정부 조달시장, 전략적 진출을 지원합니다</p>
@@ -24,7 +24,7 @@ export default function USMarketPage() {
       </section>
 
       {/* Service Introduction */}
-      <section className="content-section pt-section pb-section">
+      <section className="content-section">
         <div className="container">
           <div className="content-grid">
             <div className="content-text">
@@ -56,14 +56,14 @@ export default function USMarketPage() {
       </section>
 
       {/* Market Opportunities */}
-      <section className="content-section pt-section pb-section">
+      <section className="content-section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">주요 조달 분야</h2>
             <p className="section-subtitle">미국 정부가 구매하는 주요 제품 및 서비스 카테고리</p>
           </div>
-          <div className="services-grid grid-stretch">
-            <div className="service-card card-flow">
+          <div className="cards-grid">
+            <div className="base-card card-service">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
@@ -82,7 +82,7 @@ export default function USMarketPage() {
                 연간 $90B+ 규모
               </p>
             </div>
-            <div className="service-card card-flow">
+            <div className="base-card card-service">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M12 2L2 7l10 5 10-5-10-5z"/>
@@ -101,7 +101,7 @@ export default function USMarketPage() {
                 연간 $400B+ 규모
               </p>
             </div>
-            <div className="service-card card-flow">
+            <div className="base-card card-service">
               <div className="service-icon icon-12">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
@@ -127,40 +127,40 @@ export default function USMarketPage() {
       </section>
 
       {/* Process Section */}
-      <section id="process" className="content-section pt-section pb-section">
+      <section id="process" className="content-section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">조달시장 진출 프로세스</h2>
             <p className="section-subtitle">체계적인 6단계 프로세스로 미국 정부 공급업체가 됩니다</p>
           </div>
           
-          <div className="process-timeline">
-            <div className="process-card card-flow">
+          <div className="cards-grid">
+            <div className="base-card card-process">
               <div className="process-number">1</div>
               <h4 className="process-title card-title">시장 분석</h4>
               <p className="process-description card-text">제품/서비스 적합성 평가 및 시장 기회 분석</p>
             </div>
-            <div className="process-card card-flow">
+            <div className="base-card card-process">
               <div className="process-number">2</div>
               <h4 className="process-title card-title">자격 요건 검토</h4>
               <p className="process-description card-text">필수 인증 및 등록 요건 확인</p>
             </div>
-            <div className="process-card card-flow">
+            <div className="base-card card-process">
               <div className="process-number">3</div>
               <h4 className="process-title card-title">SAM 등록</h4>
               <p className="process-description card-text">System for Award Management 등록 대행</p>
             </div>
-            <div className="process-card card-flow">
+            <div className="base-card card-process">
               <div className="process-number">4</div>
               <h4 className="process-title card-title">인증 취득</h4>
               <p className="process-description card-text">필요 인증 획득 지원 (CMMC, ISO 등)</p>
             </div>
-            <div className="process-card card-flow">
+            <div className="base-card card-process">
               <div className="process-number">5</div>
               <h4 className="process-title card-title">입찰 참여</h4>
               <p className="process-description card-text">입찰 기회 발굴 및 제안서 작성 지원</p>
             </div>
-            <div className="process-card card-flow">
+            <div className="base-card card-process">
               <div className="process-number">6</div>
               <h4 className="process-title card-title">계약 관리</h4>
               <p className="process-description card-text">계약 이행 및 컴플라이언스 관리</p>
@@ -170,14 +170,14 @@ export default function USMarketPage() {
       </section>
 
       {/* Key Services */}
-      <section className="content-section pt-section pb-section">
+      <section className="content-section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">핵심 지원 서비스</h2>
             <p className="section-subtitle">미국 조달시장 진출에 필요한 모든 서비스를 제공합니다</p>
           </div>
-          <div className="content-grid">
-            <div className="card card-flow">
+          <div className="cards-grid">
+            <div className="base-card">
               <h3 className="card-title">SAM.gov 등록 대행</h3>
               <p className="card-content">
                 미국 정부와 거래하기 위한 필수 등록 시스템인 SAM(System for Award Management) 
@@ -185,21 +185,21 @@ export default function USMarketPage() {
                 모든 과정을 지원합니다.
               </p>
             </div>
-            <div className="card card-flow">
+            <div className="base-card">
               <h3 className="card-title">GSA Schedule 등록</h3>
               <p className="card-content">
                 미국 정부 조달의 가장 효율적인 경로인 GSA Schedule 계약 체결을 
                 지원합니다. 가격 협상부터 계약 관리까지 전 과정을 함께합니다.
               </p>
             </div>
-            <div className="card card-flow">
+            <div className="base-card">
               <h3 className="card-title">CMMC 인증 지원</h3>
               <p className="card-content">
                 국방부 계약에 필수적인 Cybersecurity Maturity Model Certification 
                 획득을 위한 컨설팅과 준비 과정을 지원합니다.
               </p>
             </div>
-            <div className="card card-flow">
+            <div className="base-card">
               <h3 className="card-title">제안서 작성 지원</h3>
               <p className="card-content">
                 RFP/RFQ 분석부터 기술 제안서 작성, 가격 제안까지 
@@ -211,7 +211,7 @@ export default function USMarketPage() {
       </section>
 
       {/* Success Factors */}
-      <section className="content-section pt-section pb-section">
+      <section className="content-section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">성공 요인</h2>
@@ -243,7 +243,7 @@ export default function USMarketPage() {
       </section>
 
       {/* E-commerce Distribution Strategy */}
-      <section className="content-section pt-section pb-section" style={{ background: 'var(--background-subtle)' }}>
+      <section className="content-section" style={{ background: 'var(--background-subtle)' }}>
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">미국 유통망 진입 전략</h2>
@@ -330,7 +330,7 @@ export default function USMarketPage() {
       </section>
 
       {/* Fulfillment & Compliance Section */}
-      <section className="content-section pt-section pb-section">
+      <section className="content-section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">Fulfillment & 규제 대응</h2>
@@ -454,7 +454,7 @@ export default function USMarketPage() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="cta pt-section pb-section">
+      <section id="contact" className="cta cta-section">
         <div className="container">
           <div className="cta-content">
             <h2 className="cta-title">미국 조달시장 진출 상담</h2>
