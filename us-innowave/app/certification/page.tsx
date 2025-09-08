@@ -94,6 +94,122 @@ export default function CertificationPage() {
                 <li>생산성 향상</li>
               </ul>
             </div>
+            <div className="base-card card-service">
+              <div className="service-icon icon-12">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 2v20M2 12h20"/>
+                  <path d="M4 4l16 16M20 4L4 20"/>
+                </svg>
+              </div>
+              <h3 className="service-title">ISO 27001</h3>
+              <h4 style={{ color: 'var(--brand-secondary)', marginBottom: '1rem' }}>정보보안경영시스템</h4>
+              <p className="service-description">
+                정보자산 보호와 사이버 보안을 위한 국제 표준 인증
+              </p>
+              <ul className="feature-list">
+                <li>정보보안 강화</li>
+                <li>데이터 보호</li>
+                <li>사이버 위협 대응</li>
+                <li>고객 신뢰 확보</li>
+              </ul>
+            </div>
+            <div className="base-card card-service">
+              <div className="service-icon icon-12">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M3 3h18v18H3zM9 3v18M15 3v18M3 9h18M3 15h18"/>
+                </svg>
+              </div>
+              <h3 className="service-title">ISO 22000</h3>
+              <h4 style={{ color: 'var(--brand-secondary)', marginBottom: '1rem' }}>식품안전경영시스템</h4>
+              <p className="service-description">
+                식품 생산·유통 전 과정의 안전성을 보장하는 인증
+              </p>
+              <ul className="feature-list">
+                <li>식품 안전성 확보</li>
+                <li>HACCP 통합</li>
+                <li>법규 준수</li>
+                <li>소비자 신뢰</li>
+              </ul>
+            </div>
+            <div className="base-card card-service">
+              <div className="service-icon icon-12">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="9" y1="9" x2="15" y2="9"/>
+                  <line x1="9" y1="15" x2="15" y2="15"/>
+                </svg>
+              </div>
+              <h3 className="service-title">ISO 13485</h3>
+              <h4 style={{ color: 'var(--brand-secondary)', marginBottom: '1rem' }}>의료기기품질경영시스템</h4>
+              <p className="service-description">
+                의료기기 제조 및 품질관리를 위한 특화된 인증
+              </p>
+              <ul className="feature-list">
+                <li>의료기기 품질보증</li>
+                <li>규제 요구사항 충족</li>
+                <li>제품 안전성</li>
+                <li>글로벌 시장 진출</li>
+              </ul>
+            </div>
+            <div className="base-card card-service">
+              <div className="service-icon icon-12">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M5 12s2.545-5 7-5c4.454 0 7 5 7 5s-2.546 5-7 5c-4.455 0-7-5-7-5z"/>
+                  <path d="M12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                  <path d="M21 17v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2"/>
+                  <path d="M21 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2"/>
+                </svg>
+              </div>
+              <h3 className="service-title">ISO 50001</h3>
+              <h4 style={{ color: 'var(--brand-secondary)', marginBottom: '1rem' }}>에너지경영시스템</h4>
+              <p className="service-description">
+                에너지 효율 개선과 비용 절감을 위한 체계적 관리
+              </p>
+              <ul className="feature-list">
+                <li>에너지 비용 절감</li>
+                <li>탄소 배출 감소</li>
+                <li>에너지 효율 향상</li>
+                <li>지속가능 경영</li>
+              </ul>
+            </div>
+            <div className="base-card card-service">
+              <div className="service-icon icon-12">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M2 20h20"/>
+                  <path d="M7 20V10l5-6 5 6v10"/>
+                  <path d="M10 20v-6h4v6"/>
+                </svg>
+              </div>
+              <h3 className="service-title">ISO 22301</h3>
+              <h4 style={{ color: 'var(--brand-secondary)', marginBottom: '1rem' }}>비즈니스연속성경영시스템</h4>
+              <p className="service-description">
+                재해·재난 상황에서도 비즈니스 연속성을 보장
+              </p>
+              <ul className="feature-list">
+                <li>위기 대응 능력</li>
+                <li>사업 중단 최소화</li>
+                <li>복구 시간 단축</li>
+                <li>리스크 관리</li>
+              </ul>
+            </div>
+            <div className="base-card card-service">
+              <div className="service-icon icon-12">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                </svg>
+              </div>
+              <h3 className="service-title">ISO 37001</h3>
+              <h4 style={{ color: 'var(--brand-secondary)', marginBottom: '1rem' }}>부패방지경영시스템</h4>
+              <p className="service-description">
+                기업 윤리와 투명성 확보를 위한 반부패 관리 시스템
+              </p>
+              <ul className="feature-list">
+                <li>부패 리스크 예방</li>
+                <li>컴플라이언스 강화</li>
+                <li>기업 신뢰도 향상</li>
+                <li>투명경영 실현</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -249,6 +365,36 @@ export default function CertificationPage() {
               >
                 사회적기업
               </button>
+              <button 
+                className={`${styles.certTabBtn} ${activeTab === 'cert6' ? styles.active : ''}`}
+                onClick={() => showCertTab('cert6')}
+              >
+                강소기업
+              </button>
+              <button 
+                className={`${styles.certTabBtn} ${activeTab === 'cert7' ? styles.active : ''}`}
+                onClick={() => showCertTab('cert7')}
+              >
+                가족친화기업
+              </button>
+              <button 
+                className={`${styles.certTabBtn} ${activeTab === 'cert8' ? styles.active : ''}`}
+                onClick={() => showCertTab('cert8')}
+              >
+                청년친화강소기업
+              </button>
+              <button 
+                className={`${styles.certTabBtn} ${activeTab === 'cert9' ? styles.active : ''}`}
+                onClick={() => showCertTab('cert9')}
+              >
+                녹색기업
+              </button>
+              <button 
+                className={`${styles.certTabBtn} ${activeTab === 'cert10' ? styles.active : ''}`}
+                onClick={() => showCertTab('cert10')}
+              >
+                여성기업
+              </button>
             </div>
             
             {/* Tab Contents */}
@@ -394,6 +540,156 @@ export default function CertificationPage() {
                       <li>신청기관 검토 및 현장실사</li>
                       <li>인증심사위원회 심의</li>
                       <li>고용노동부 인증 (약 3-4개월)</li>
+                    </ol>
+                  </div>
+                </div>
+                <a href="#contact-form" className={styles.btnWhite}>무료 상담 신청</a>
+              </div>
+            </div>
+            
+            <div className={`${styles.certTabContent} ${activeTab === 'cert6' ? styles.active : ''}`}>
+              <div className={styles.certCard}>
+                <h3>강소기업</h3>
+                <div className={styles.certInfo}>
+                  <div className={styles.certSummary}>
+                    <h4>인증 개요</h4>
+                    <p>규모는 작지만 우수한 기술력과 성장 잠재력을 보유한 강한 중소기업으로 고용노동부에서 선정</p>
+                    <ul className={styles.certBenefits}>
+                      <li>✓ 청년 채용 인건비 지원</li>
+                      <li>✓ 직무능력개발 훈련비 지원</li>
+                      <li>✓ 일자리 창출 지원금</li>
+                      <li>✓ 근무환경 개선 자금</li>
+                      <li>✓ 정부 지원사업 우대</li>
+                    </ul>
+                  </div>
+                  <div className={styles.certProcess}>
+                    <h4>인증 절차</h4>
+                    <ol>
+                      <li>기업 자격요건 확인</li>
+                      <li>온라인 신청서 제출</li>
+                      <li>서류 심사 (재무, 고용 지표)</li>
+                      <li>현장 실사 및 평가</li>
+                      <li>선정위원회 심의 및 발표</li>
+                    </ol>
+                  </div>
+                </div>
+                <a href="#contact-form" className={styles.btnWhite}>무료 상담 신청</a>
+              </div>
+            </div>
+            
+            <div className={`${styles.certTabContent} ${activeTab === 'cert7' ? styles.active : ''}`}>
+              <div className={styles.certCard}>
+                <h3>가족친화기업</h3>
+                <div className={styles.certInfo}>
+                  <div className={styles.certSummary}>
+                    <h4>인증 개요</h4>
+                    <p>일과 가정의 양립을 지원하는 가족친화제도를 모범적으로 운영하는 기업·기관에 대한 여성가족부 인증</p>
+                    <ul className={styles.certBenefits}>
+                      <li>✓ 정부·지자체 입찰 가점</li>
+                      <li>✓ 중소기업 지원자금 금리 우대</li>
+                      <li>✓ 인증마크 사용권</li>
+                      <li>✓ 가족친화 컨설팅 지원</li>
+                      <li>✓ 우수기업 정부 포상</li>
+                    </ul>
+                  </div>
+                  <div className={styles.certProcess}>
+                    <h4>인증 절차</h4>
+                    <ol>
+                      <li>가족친화제도 도입 및 운영</li>
+                      <li>온라인 신청 (가족친화지원사업)</li>
+                      <li>서류심사 및 현장심사</li>
+                      <li>인증위원회 심의</li>
+                      <li>인증서 발급 (유효기간 3년)</li>
+                    </ol>
+                  </div>
+                </div>
+                <a href="#contact-form" className={styles.btnWhite}>무료 상담 신청</a>
+              </div>
+            </div>
+            
+            <div className={`${styles.certTabContent} ${activeTab === 'cert8' ? styles.active : ''}`}>
+              <div className={styles.certCard}>
+                <h3>청년친화강소기업</h3>
+                <div className={styles.certInfo}>
+                  <div className={styles.certSummary}>
+                    <h4>인증 개요</h4>
+                    <p>청년들이 선호하는 양질의 일자리를 제공하고 청년 고용 창출에 기여하는 우수 중소기업</p>
+                    <ul className={styles.certBenefits}>
+                      <li>✓ 청년 신규채용 인건비 지원</li>
+                      <li>✓ 청년 근속장려금 지원</li>
+                      <li>✓ 기업 홍보 및 채용 지원</li>
+                      <li>✓ 직무교육 프로그램 제공</li>
+                      <li>✓ 청년 고용 컨설팅</li>
+                    </ul>
+                  </div>
+                  <div className={styles.certProcess}>
+                    <h4>인증 절차</h4>
+                    <ol>
+                      <li>기업 요건 확인 (고용증가율, 임금수준)</li>
+                      <li>워크넷 온라인 신청</li>
+                      <li>정량·정성 평가</li>
+                      <li>선정위원회 최종 심의</li>
+                      <li>선정 결과 발표</li>
+                    </ol>
+                  </div>
+                </div>
+                <a href="#contact-form" className={styles.btnWhite}>무료 상담 신청</a>
+              </div>
+            </div>
+            
+            <div className={`${styles.certTabContent} ${activeTab === 'cert9' ? styles.active : ''}`}>
+              <div className={styles.certCard}>
+                <h3>녹색기업</h3>
+                <div className={styles.certInfo}>
+                  <div className={styles.certSummary}>
+                    <h4>인증 개요</h4>
+                    <p>환경친화적 경영체제를 구축하고 환경개선에 크게 기여하는 기업으로 환경부에서 지정</p>
+                    <ul className={styles.certBenefits}>
+                      <li>✓ 환경개선 자금 융자 우대</li>
+                      <li>✓ 배출시설 지도·점검 면제</li>
+                      <li>✓ 환경 관련 행정처분 경감</li>
+                      <li>✓ 녹색제품 공공구매 우대</li>
+                      <li>✓ 환경 기술지원 우선 제공</li>
+                    </ul>
+                  </div>
+                  <div className={styles.certProcess}>
+                    <h4>인증 절차</h4>
+                    <ol>
+                      <li>환경경영시스템 구축 (ISO 14001)</li>
+                      <li>지정 신청서 제출</li>
+                      <li>서류심사 및 현장평가</li>
+                      <li>녹색기업 지정심사</li>
+                      <li>지정서 교부 (유효기간 5년)</li>
+                    </ol>
+                  </div>
+                </div>
+                <a href="#contact-form" className={styles.btnWhite}>무료 상담 신청</a>
+              </div>
+            </div>
+            
+            <div className={`${styles.certTabContent} ${activeTab === 'cert10' ? styles.active : ''}`}>
+              <div className={styles.certCard}>
+                <h3>여성기업</h3>
+                <div className={styles.certInfo}>
+                  <div className={styles.certSummary}>
+                    <h4>인증 개요</h4>
+                    <p>여성이 소유하고 경영하는 기업으로 중소벤처기업부와 한국여성경제인협회에서 확인·지원</p>
+                    <ul className={styles.certBenefits}>
+                      <li>✓ 공공기관 구매 목표제 (5%)</li>
+                      <li>✓ 정책자금 우대 지원</li>
+                      <li>✓ 신용보증 우대</li>
+                      <li>✓ 수출 및 판로 지원</li>
+                      <li>✓ 여성기업 전용 지원사업</li>
+                    </ul>
+                  </div>
+                  <div className={styles.certProcess}>
+                    <h4>인증 절차</h4>
+                    <ol>
+                      <li>자격요건 확인 (여성 지분 50% 이상)</li>
+                      <li>온라인 신청 (여성기업확인서)</li>
+                      <li>서류 심사</li>
+                      <li>현장 실태조사 (필요시)</li>
+                      <li>확인서 발급 (유효기간 2년)</li>
                     </ol>
                   </div>
                 </div>

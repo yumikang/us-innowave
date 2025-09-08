@@ -257,17 +257,6 @@ export default function PolicyFundPage() {
             </div>
             <div className="base-card" style={{ textAlign: 'center' }}>
               <div style={{ height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ef4444" strokeWidth="2">
-                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-                </svg>
-              </div>
-              <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '8px' }}>KOTRA</h4>
-              <p style={{ fontSize: '0.875rem', color: 'var(--gray-600)' }}>
-                수출지원, 해외진출
-              </p>
-            </div>
-            <div className="base-card" style={{ textAlign: 'center' }}>
-              <div style={{ height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
                 <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" strokeWidth="2">
                   <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7z"/>
                 </svg>
@@ -325,7 +314,6 @@ export default function PolicyFundPage() {
                 <li><strong>창업진흥원</strong> - 창업사관학교, 실전창업교육</li>
               </ul>
               <ul className="content-list">
-                <li><strong>KOTRA</strong> - 수출바우처, 글로벌 전시회 지원</li>
                 <li><strong>중진공</strong> - 정책자금 직접대출, 온렌딩</li>
                 <li><strong>소진공</strong> - 소상공인 정책자금, 컨설팅</li>
                 <li><strong>산업은행</strong> - 시설자금, 산업구조조정</li>
