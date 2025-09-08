@@ -123,6 +123,29 @@ export default function CompanyIntroPage() {
               </ul>
             </div>
           </div>
+          
+          {/* 주요 성과 추가 (회사연혁 섹션에서 이동) */}
+          <div className="grid-stretch" style={{ marginTop: '48px' }}>
+            <div className="base-card">
+              <h3 className="card-title">주요 성과</h3>
+              <div className={styles.achievementGrid}>
+                <div className={styles.achievementItem}>
+                  <div className={styles.achievementNumber}>500+</div>
+                  <div>
+                    <h4>누적 컨설팅 건수</h4>
+                    <p>다양한 산업 분야의 기업들과 함께했습니다</p>
+                  </div>
+                </div>
+                <div className={styles.achievementItem}>
+                  <div className={styles.achievementNumber}>95%</div>
+                  <div>
+                    <h4>고객 만족도</h4>
+                    <p>높은 만족도와 재계약률을 유지하고 있습니다</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -228,47 +251,6 @@ export default function CompanyIntroPage() {
         </div>
       </section>
 
-      {/* History Section */}
-      <section className="content-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">회사 연혁</h2>
-            <p className="section-subtitle">유에스이노웨이브의 성장 여정</p>
-          </div>
-          <div className="grid-stretch">
-            <div className="content-text">
-              <ul className="content-list">
-                <li><strong>2024년</strong> - ISO 인증 컨설팅 서비스 런칭</li>
-                <li><strong>2023년</strong> - 미국 현지 파트너십 체결</li>
-                <li><strong>2022년</strong> - FDA 인증 전문팀 구성</li>
-                <li><strong>2021년</strong> - 정책자금 컨설팅 100건 달성</li>
-                <li><strong>2020년</strong> - 유에스이노웨이브 설립</li>
-              </ul>
-            </div>
-            <div className="content-text">
-              <div className="base-card">
-                <h3 className="card-title">주요 성과</h3>
-                <div className={styles.achievementGrid}>
-                  <div className={styles.achievementItem}>
-                    <div className={styles.achievementNumber}>500+</div>
-                    <div>
-                      <h4>누적 컨설팅 건수</h4>
-                      <p>다양한 산업 분야의 기업들과 함께했습니다</p>
-                    </div>
-                  </div>
-                  <div className={styles.achievementItem}>
-                    <div className={styles.achievementNumber}>95%</div>
-                    <div>
-                      <h4>고객 만족도</h4>
-                      <p>높은 만족도와 재계약률을 유지하고 있습니다</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Legal Advisory Section */}
       <section className="content-section">
