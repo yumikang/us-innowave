@@ -6,8 +6,8 @@ const Header = () => {
     { href: '/company-intro', label: '회사소개' },
     { href: '/policy-fund', label: '정책자금 컨설팅' },
     { href: '/services', label: '수출 지원' },
-    { href: '/certification', label: 'ISO & 기업인증' },
     { href: '/us-market', label: '미국 공급망 & 조달시장' },
+    { href: '/certification', label: 'ISO & 기업인증' },
     { href: '/contact', label: '문의하기' },
   ];
 
