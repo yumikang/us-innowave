@@ -26,7 +26,7 @@ const Header = () => {
           <nav className="nav-desktop" aria-label="주요 메뉴">
             <ul className="nav-menu">
               {navItems.map((item) => (
-                <li key={item.href} className={`nav-item ${item.isActive ? 'active' : ''}`}>
+                <li key={item.href} className="nav-item">
                   <Link href={item.href} className="nav-link">
                     {item.label}
                   </Link>
