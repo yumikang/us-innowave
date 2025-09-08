@@ -77,9 +77,9 @@
        =================================== */
     
     /* Brand Colors */
-    --brand-primary: #009DAE; /* 청록 + 약간 톤다운, 메인 */
-    --brand-secondary: #33B8B8; /* 보조, 밝지만 차분 */
-    --brand-accent: #66CCCC; /* 포인트, 산뜻하고 고급스러운 아쿠아 */
+    --brand-primary: #3AD2FF; /* 밝은 하늘색, 메인 브랜드 컬러 */
+    --brand-secondary: #00B8F0; /* 보조, 조금 더 진한 청색 */
+    --brand-accent: #7DE2FF; /* 포인트, 더 밝은 하늘색 */
     
     /* Gray Scale */
     --gray-50: #f9fafb;
